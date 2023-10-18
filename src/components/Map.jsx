@@ -39,7 +39,7 @@ export default function Map({ lng, lat, address, name, link }) {
 
     // Clean up on component unmount
     return () => map.remove();
-  }, []);
+  }, [lng, lat, address]);
 
 
   return (
