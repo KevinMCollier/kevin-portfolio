@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import mapboxgl from 'mapbox-gl';
 
-mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
+mapboxgl.accessToken = import.meta.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
 export default function Map({ lng, lat, address, name, link }) {
   const mapContainer = useRef(null);
