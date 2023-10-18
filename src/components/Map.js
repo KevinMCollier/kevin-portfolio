@@ -1,10 +1,20 @@
 import { useEffect, useRef } from "react";
 import mapboxgl from 'mapbox-gl';
+import PropTypes from 'prop-types';
 
 mapboxgl.accessToken = import.meta.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
 export default function Map({ lng, lat, address, name, link }) {
   const mapContainer = useRef(null);
+
+  Map.propTypes = {
+    lng: PropTypes.number.isRequired,
+    lat: PropTypes.number.isRequired,
+    address: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired
+  };
+
 
   useEffect(() => {
     // Initialize the map
