@@ -30,7 +30,7 @@ export default function Projects() {
                   </a>
                   <div className="flex flex-wrap py-3 mb-2">
                     {project.stack.map((tech, index) =>(
-                      <div className="sm:text-left mr-3 flex items-center">
+                      <div key={tech.name} className="sm:text-left mr-3 flex items-center">
                         <div className="hover:bg-yellow-200 flex items-center">
                           <img src={tech.logo} alt={tech.name} className="w-4 h-4 mr-1" />
                           <p>{tech.name}</p>
