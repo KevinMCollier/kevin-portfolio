@@ -29,10 +29,10 @@ export default function Contact() {
           Get in touch with me on social media
         </h2>
         <div className="justify-center text-center">
-          <div className="inline-block mr-10 text-3xl hover:text-turqoise">
+          <div className="inline-block mr-16 text-6xl text-periwinkle hover:text-deep-cyan">
             <a href="https://github.com/KevinMCollier" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
           </div>
-          <div className="inline-block text-3xl hover:text-turqoise">
+          <div className="inline-block text-6xl text-periwinkle hover:text-deep-cyan">
             <a href="https://www.linkedin.com/in/kevin-collier/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
           </div>
         </div>
@@ -44,7 +44,7 @@ export default function Contact() {
           onSubmit={handleSubmit}
           className="lg:w-2/3 md:w-full flex flex-wrap w-full md:py-8 mt-8 md:mt-0">
           <input type="hidden" name="form-name" value="contact" />
-          <h2 className="text-gray-800 sm:text-3xl text-2xl mb-4 font-medium title-font w-full text-center">
+          <h2 className="text-gray-800 sm:text-3xl text-2xl mb-8 font-medium title-font w-full text-center">
             ... Or send me a message here <span role="img" aria-label="memo">📝</span>
           </h2>
           <div className="md:w-1/2 pr-4 mb-4">

@@ -52,7 +52,7 @@ export default function Map({ lng, lat, address, name, link }) {
         </a>
       </h2>
       <div ref={mapContainer} style={{ width: '700px', height: '350px', margin: 'auto', position: 'relative' }}></div>
-      <h2 className="text-center text-lg font-bold mt-5 mb-10">Come back next week for some new recommendations!</h2>
+      <h2 className="text-center text-lg font-bold mt-5 mb-5">Come back next week for some new recommendations!</h2>
     </section>
   );
 }
