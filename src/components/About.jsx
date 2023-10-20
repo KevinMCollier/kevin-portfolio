@@ -40,16 +40,17 @@ export default function About() {
           <h1 className="sm:text-3xl text-lg mb-4 font-bold text-gray-100 text-center md:text-left">
             About Me
           </h1>
-          <p className="mb-4 sm:text-lg">I am a Full-Stack Web Developer with a passion for learning.</p>
+          <p className="mb-4 sm:text-lg">I&apos;m a Front-End Web Developer with a passion for learning.</p>
           <p className="mb-4 sm:text-lg">
             My interest in software engineering started to blossom as I began looking further into potential solutions to problems in the L&D field. I want to have a career where I can contribute hands-on to solutions in both the education field and beyond. My long term goal is to create apps that improve the way we learn and grow.
           </p>
           <p className="mb-4 sm:text-lg">
-            Before transitioning into web development, I worked as a supervisor of over 300+ international educators at Tokyo Global Gateway. Leading this initiative taught me how to work within a diverse team while also meeting the high standards of stakeholders such as the Tokyo Metropolitan Board of Education and Gakken Holdings.
+            Currently, I&apos;m working on developing apps for various projects while also pursuing a full-time role in web development.
           </p>
           <p className="mb-4 sm:text-lg">
-            Currently, I am working on developing apps for various projects while also pursuing a full-time role in web development.
-            When I am not coding, you can find me walking my dog or eating at one of my favorite restaurants around Tokyo.
+            I&apos;m originally from Arizona in the United States, but I&apos;ve been living overseas for the past 12 years - one year in the UK, one year in Sweden, and 10+ years in Japan.
+            I&apos;m currently living in Tokyo with my wife and our toy poodle.
+            When I&apos; not coding, you can find me walking my dog or eating at one of my favorite restaurants around Tokyo.
           </p>
           <p className="text-lg font-semibold cursor-pointer flashing-text mb-2" onClick={() => setShowMap(!showMap)}>
             {currentLocation && currentLocation.description}, anyone? 👉
