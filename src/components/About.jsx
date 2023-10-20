@@ -14,7 +14,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about">
+    <section id="about" className="bg-sand-leather text-gray-100">
       <div className="container mx-auto flex px-5 py-20 md:flex-row flex-col items-center">
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full mb-10 md:mb-0 items-center">
           <img
@@ -24,7 +24,7 @@ export default function About() {
           />
         </div>
         <div className="lg:flex-grow md:w-1/2 flex flex-col sm:items-start md:mb-0">
-          <h1 className="title-font sm:text-xl text-l mb-2 font-medium text-gray-900 text-center md:text-left">
+          <h1 className="title-font sm:text-xl text-l mb-2 font-medium text-gray-100 text-center md:text-left">
             Career Overview
           </h1>
           {highlights.map((highlight, index) => (
@@ -37,7 +37,7 @@ export default function About() {
       </div>
       <div className="container mx-auto flex px-10 md:py-4 md:flex-row flex-col items-center justify-center">
         <div className="mb-8 leading-relaxed sm:w-3/4">
-          <h1 className="title-font sm:text-xl text-l mb-2 font-medium text-gray-900 text-center md:text-left">
+          <h1 className="title-font sm:text-xl text-l mb-2 font-medium text-gray-100 text-center md:text-left">
             About Me
           </h1>
           <p className="mb-4">I am a Full-Stack Web Developer with a passion for learning.</p>
