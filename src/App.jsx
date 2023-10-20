@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <div className="App text-gray-800 bg-gray-100 body-font">
+      <div className="App text-gray-800 bg-gray-200 body-font">
         <Navbar />
         <Banner />
         <Projects />
