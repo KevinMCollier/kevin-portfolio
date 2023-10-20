@@ -44,11 +44,11 @@ export default function Map({ lng, lat, address, name, link }) {
 
   return (
 
-    <section id="map" className="relative">
-      <h2 className="text-center text-l font-bold mb-2">
-        My recommendation:
-        <a href={link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline ml-1">
-          {name}
+    <section id="map" className="relative mb-20">
+      <h2 className="text-center text-l font-bold mb-5">
+        Why not try
+        <a href={link} target="_blank" rel="noopener noreferrer" className="hover:underline ml-1">
+          {name}?
         </a>
       </h2>
       <div ref={mapContainer} style={{ width: '700px', height: '350px', margin: 'auto', position: 'relative' }}></div>

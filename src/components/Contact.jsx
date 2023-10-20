@@ -23,8 +23,8 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative">
-      <div className="container px-5 py-5 mt-10 mx-auto flex flex-col justify-center">
+    <section id="contact" className="relative bg-forest-green">
+      <div className="container px-5 py-5 mx-auto flex flex-col justify-center">
         <h2 className="text-gray-800 sm:text-3xl text-2xl mb-4 font-medium text-center">
           Get in touch with me on social media
         </h2>

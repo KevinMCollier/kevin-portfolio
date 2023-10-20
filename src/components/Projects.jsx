@@ -7,7 +7,7 @@ export default function Projects() {
       <div className="container px-5 py-20 mx-auto text-center lg:px-20">
         <div className="flex flex-col w-full mb-5">
           {/* <CodeIcon className="mx-auto inline-block w-10 mb-4" /> */}
-          <h1 className="sm:text-5xl text-3xl font-bold title-font text-forest-green sm:mb-5">
+          <h1 className="sm:text-5xl text-3xl font-bold title-font text-sand-leather sm:mb-5">
             My Work
           </h1>
         </div>
@@ -31,7 +31,7 @@ export default function Projects() {
                   <div className="flex flex-wrap py-3 mb-2">
                     {project.stack.map((tech, index) =>(
                       <div key={tech.name} className="sm:text-left mr-3 flex items-center sm:text-lg">
-                        <div className="hover:bg-sand-leather flex items-center">
+                        <div className="flex items-center">
                           <img src={tech.logo} alt={tech.name} className="w-4 h-4 mr-1" />
                           <p>{tech.name}</p>
                         </div>
