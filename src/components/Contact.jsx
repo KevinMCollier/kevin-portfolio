@@ -29,10 +29,10 @@ export default function Contact() {
           Get in touch with me on social media
         </h2>
         <div className="justify-center text-center">
-          <div className="inline-block mr-10 text-3xl hover:text-cyan-700">
+          <div className="inline-block mr-10 text-3xl hover:text-turqoise">
             <a href="https://github.com/KevinMCollier" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
           </div>
-          <div className="inline-block text-3xl hover:text-cyan-700">
+          <div className="inline-block text-3xl hover:text-turqoise">
             <a href="https://www.linkedin.com/in/kevin-collier/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function Contact() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full bg-gray-300 rounded border border-gray-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-700 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-gray-300 rounded border border-gray-300 focus:border-deep-cyan focus:ring-2 focus:ring-turqoise text-base outline-none text-gray-800 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
@@ -68,7 +68,7 @@ export default function Contact() {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full bg-gray-300 rounded border border-gray-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-700 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-gray-300 rounded border border-gray-300 focus:border-deep-cyan focus:ring-2 focus:ring-turqoise text-base outline-none text-gray-800 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -81,13 +81,13 @@ export default function Contact() {
               <textarea
                 id="message"
                 name="message"
-                className="w-full bg-gray-300 rounded border border-gray-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-700 h-40 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                className="w-full bg-gray-300 rounded border border-gray-300 focus:border-deep-cyan focus:ring-2 focus:ring-turqoise h-40 text-base outline-none text-gray-800 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
             <button
               type="submit"
-              className="text-white bg-yellow-300 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-400 rounded text-lg md:float-right">
+              className="text-white bg-periwinkle border-0 py-2 px-6 focus:outline-none hover:bg-deep-cyan rounded text-lg md:float-right">
               Submit
             </button>
           </div>
