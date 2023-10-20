@@ -1,12 +1,9 @@
-@keyframes flashingColors {
-  0% { color: #000000; }
-  20% { color: #10377a; }
-  40% { color: #fab703; }
-  60% { color: #e36712; }
-  80% { color: #a9201d; }
-  100% { color: #632727; }
+@keyframes pulse {
+  0% { transform: scale(1); color: #ffffff }
+  50% { transform: scale(1.1); color: #dddddd }
+  100% { transform: scale(1); color: #ffffff }
 }
 
-.flashing-text {
-  animation: flashingColors 3s infinite;
+.pulse-text {
+  animation: pulse 2s infinite;
 }

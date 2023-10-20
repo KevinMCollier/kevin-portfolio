@@ -52,9 +52,8 @@ export default function About() {
             I&apos;m currently living in Tokyo with my wife and our toy poodle.
             When I&apos; not coding, you can find me walking my dog or eating at one of my favorite restaurants around Tokyo.
           </p>
-          <p className="text-lg font-semibold cursor-pointer flashing-text mb-2" onClick={() => setShowMap(!showMap)}>
-            {currentLocation && currentLocation.description}, anyone? 👉
-          </p>
+          <p className="mb-2 sm:text-lg">Here is one of my favorites 👉 <a href="#" className="text-lg ml-3 font-semibold cursor-pointer pulse-text mb-2" onClick={(e) => { e.preventDefault(); setShowMap(!showMap); }}>{showMap ? "Hide map" : (currentLocation && currentLocation.description + ", anyone?")}</a></p>
+
         </div>
       </div>
         {showMap && <div className="container mx-auto flex px-10 md:py-4 md:flex-row flex-col items-center justify-center sm:w-3/4">
