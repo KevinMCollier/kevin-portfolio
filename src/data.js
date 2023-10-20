@@ -3,7 +3,7 @@ export const projects = [
     title: "OnTrack",
     subtitle: "Rails and JavaScript",
     description:
-      "An edtech app that makes learning more engaging through personalized assignments and an interactive study buddy. OnTrack creates interactive projects that align with the learning goals, interests, and hobbies of each user. Throughout their learning journey, users are encouraged and supported by their own animal buddy. Designed for smartphone, deployed as a progressive web app. OnTrack is powered by ChatGPT and the Open AI API. Worked as the team lead with a group of four developers to create OnTrack.",
+      "An edtech app that makes learning more engaging through personalized assignments and an interactive study buddy. OnTrack creates interactive projects that align with the learning goals and interests of each user. Designed for smartphone, deployed as a progressive web app. Powered by ChatGPT and the Open AI API. Worked as the team lead with a group of four developers to create OnTrack.",
     stack: [
       { name: 'Ruby on Rails', logo: './rubyonrails.svg'},
       { name: 'Stimulus JS', logo: './stimulus.svg'},

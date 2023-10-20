@@ -4,11 +4,11 @@ import { projects } from "../data";
 export default function Projects() {
   return (
     <section id="projects" className="text-gray-800 bg-gray-100 body-font">
-      <div className="container px-5 py-20 mx-auto text-center lg:px-40">
+      <div className="container px-5 py-20 mx-auto text-center lg:px-20">
         <div className="flex flex-col w-full mb-5">
           {/* <CodeIcon className="mx-auto inline-block w-10 mb-4" /> */}
-          <h1 className="sm:text-4xl text-3xl font-medium title-font text-gray-800">
-            Projects
+          <h1 className="sm:text-5xl text-3xl font-bold title-font text-sand-leather sm:mb-5">
+            My Work
           </h1>
         </div>
         <div className="flex flex-col items-start -m-4">
@@ -26,12 +26,12 @@ export default function Projects() {
               <div className="sm:ml-8 mb-6 sm:w-1/2">
                 <div className="flex flex-col items-start">
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    <h2 className="sm:text-xl sm:text-left mb-2 text-2xl font-semibold hover:text-cyan-700 uppercase tracking-wider">{project.title}</h2>
+                    <h2 className="sm:text-2xl sm:text-left mb-2 text-2xl font-bold text-deep-cyan hover:text-periwinkle tracking-wider">{project.title}</h2>
                   </a>
                   <div className="flex flex-wrap py-3 mb-2">
                     {project.stack.map((tech, index) =>(
-                      <div key={tech.name} className="sm:text-left mr-3 flex items-center">
-                        <div className="hover:bg-yellow-200 flex items-center">
+                      <div key={tech.name} className="sm:text-left mr-3 flex items-center sm:text-lg">
+                        <div className="flex items-center">
                           <img src={tech.logo} alt={tech.name} className="w-4 h-4 mr-1" />
                           <p>{tech.name}</p>
                         </div>
@@ -41,8 +41,8 @@ export default function Projects() {
                       </div>
                     ))}
                   </div>
-                  <p className="text-left text-sx font-semibold">Overview:</p>
-                  <p className="text-left text-s mb-6">
+                  <p className="text-left sm:text-lg font-semibold">Overview:</p>
+                  <p className="text-left text-s mb-6 sm:text-lg leading-loose">
                     {project.description}
                   </p>
                 </div>
