@@ -7,8 +7,8 @@ export default function Projects() {
       <div className="container px-5 py-20 mx-auto text-center lg:px-40">
         <div className="flex flex-col w-full mb-5">
           {/* <CodeIcon className="mx-auto inline-block w-10 mb-4" /> */}
-          <h1 className="sm:text-4xl text-3xl font-medium title-font text-forest-green">
-            Projects
+          <h1 className="sm:text-5xl text-3xl font-bold title-font text-forest-green sm:mb-5">
+            My Work
           </h1>
         </div>
         <div className="flex flex-col items-start -m-4">
