@@ -23,9 +23,9 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative bg-forest-green">
+    <section id="contact" className="relative h-screen">
       <div className="container px-5 py-5 mx-auto flex flex-col justify-center">
-        <h2 className="text-gray-800 sm:text-3xl text-2xl mb-4 font-medium text-center">
+        <h2 className="text-gray-800 sm:text-3xl text-2xl py-20 font-medium text-center">
           Get in touch with me on social media
         </h2>
         <div className="justify-center text-center">
