@@ -25,7 +25,7 @@ export default function Projects() {
               <div className="sm:ml-8 mb-6 sm:w-1/2">
                 <div className="flex flex-col items-start">
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    <h2 className="sm:text-2xl sm:text-left mb-2 text-2xl font-bold text-forest-green hover:text-sand-leather tracking-wider">{project.title}</h2>
+                    <h2 className="sm:text-2xl sm:text-left mb-2 text-2xl font-bold text-deep-cyan hover:text-sand-leather tracking-wider">{project.title}</h2>
                   </a>
                   <div className="flex flex-wrap py-3 mb-2">
                     {project.stack.map((tech, index) =>(
