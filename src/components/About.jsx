@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Map from "./Map";
 import { locations } from "../data";
 import { highlights } from "../data";
-import './About.css';
+import './Global.css';
 
 export default function About() {
   const [showMap, setShowMap] = useState(false);
@@ -15,7 +15,7 @@ export default function About() {
 
   return (
     <section id="about" className="bg-sand-leather text-gray-800">
-      <div className="container mx-auto flex px-5 py-20 md:flex-row flex-col items-center">
+      <div className="container mx-auto flex px-5 pt-20 pb-10 md:flex-row flex-col items-center">
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full mb-10 md:mb-0 items-center">
           <img
             className="object-cover object-center rounded-full mx-auto w-64 h-64"
@@ -62,11 +62,11 @@ export default function About() {
             I&apos;m currently living in Tokyo with my wife and our toy poodle.
             When I&apos; not coding, you can find me walking my dog or eating at one of my favorite restaurants around Tokyo.
           </p>
-          <p className="mb-2 sm:text-lg">Here is one of my favorites 👉 <a href="#" className="text-lg ml-3 font-semibold cursor-pointer pulse-text mb-2" onClick={(e) => { e.preventDefault(); setShowMap(!showMap); }}>{showMap ? "Hide map" : (currentLocation && currentLocation.description + ", anyone?")}</a></p>
+          <p className="sm:text-lg">Here is one of my favorites 👉 <a href="#" className="text-lg ml-3 font-semibold cursor-pointer pulse-text" onClick={(e) => { e.preventDefault(); setShowMap(!showMap); }}>{showMap ? "Hide map" : (currentLocation && currentLocation.description + ", anyone?")}</a></p>
 
         </div>
       </div>
-        {showMap && <div className="container mx-auto flex px-10 md:py-4 md:flex-row flex-col items-center justify-center sm:w-3/4">
+        {showMap && <div className="container mx-auto flex px-10 md:flex-row flex-col items-center justify-center sm:w-3/4">
           <Map
             lat={currentLocation && currentLocation.coordinates.lat}
             lng={currentLocation && currentLocation.coordinates.lng}
