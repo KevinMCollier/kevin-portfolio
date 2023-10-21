@@ -6,7 +6,7 @@ export default function Projects() {
     <section id="projects" className="text-gray-800 bg-gray-200 body-font">
       <div className="container px-5 py-20 mx-auto text-center lg:px-20">
         <div className="flex flex-col w-full mb-5">
-          <h1 className="sm:text-5xl text-3xl font-bold title-font text-gray-800 sm:mb-5">
+          <h1 className="sm:text-3xl text-lg font-bold title-font text-gray-800 sm:mb-5">
             My Work
           </h1>
         </div>
@@ -25,7 +25,7 @@ export default function Projects() {
               <div className="sm:ml-8 mb-6 sm:w-1/2">
                 <div className="flex flex-col items-start">
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    <h2 className="sm:text-2xl sm:text-left mb-2 text-2xl font-bold text-deep-cyan hover:text-periwinkle tracking-wider">{project.title}</h2>
+                    <h2 className="sm:text-2xl sm:text-left mb-2 text-2xl font-bold text-forest-green hover:text-sand-leather tracking-wider">{project.title}</h2>
                   </a>
                   <div className="flex flex-wrap py-3 mb-2">
                     {project.stack.map((tech, index) =>(
