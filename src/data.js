@@ -109,11 +109,11 @@ export const locations = [
   },
 
   {
-    name: "T.Y. Harbor",
-    description: "Craft beer by the canal",
-    address: "〒140-0002 Tokyo, Shinagawa City, 2 Chome-1-3 Higashishinagawa",
-    coordinates: { lng: 139.7473419, lat: 35.6229831 },
-    link: "https://www.google.com/search?q=t.y.harbor"
+    name: "SHANTI",
+    description: "Good vibes and curry",
+    address: "〒214-0021 Kanagawa, Kawasaki, Tama Ward, Shukugawara, 1 Chome−1−2 カスタムアパートメント 1F",
+    coordinates: { lng: 139.5721427, lat: 35.6213299 },
+    link: "https://www.google.com/search?q=shanti+noborito"
   },
 
   {
