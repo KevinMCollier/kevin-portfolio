@@ -1,7 +1,7 @@
 @keyframes pulse {
-  0% { transform: scale(1); color: #222222 }
-  50% { transform: scale(1.1); color: #666666 }
-  100% { transform: scale(1); color: #222222 }
+  0% { transform: scale(1); color: #123c2d }
+  50% { transform: scale(1.1); color: #1f694f }
+  100% { transform: scale(1); color: #123c2d }
 }
 
 .pulse-text {
