@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Map from "./Map";
 import { locations } from "../data";
 import { highlights } from "../data";
-import './About.css';
+import './Global.css';
 
 export default function About() {
   const [showMap, setShowMap] = useState(false);
@@ -14,21 +14,31 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="bg-sand-leather text-gray-100">
-      <div className="container mx-auto flex px-5 py-20 md:flex-row flex-col items-center">
+    <section id="about" className="bg-sand-leather text-gray-800">
+      <div className="container mx-auto flex px-5 pt-20 pb-10 md:flex-row flex-col items-center">
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full mb-10 md:mb-0 items-center">
           <img
             className="object-cover object-center rounded-full mx-auto w-64 h-64"
             alt="profile"
             src="./cropped-profile.jpg"
           />
+          <div className="container px-5 py-5 mx-auto flex flex-col justify-center">
+            <div className="justify-center text-center">
+              <div className="inline-block mr-10 text-4xl text-forest-green hover:text-deep-cyan">
+                <a href="https://github.com/KevinMCollier" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+              </div>
+              <div className="inline-block text-4xl text-forest-green hover:text-deep-cyan">
+                <a href="https://www.linkedin.com/in/kevin-collier/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="lg:flex-grow md:w-1/2 flex flex-col sm:items-start md:mb-0">
-          <h1 className="title-font sm:text-3xl text-l mb-4 font-bold text-gray-100 text-center md:text-left">
+          <h1 className="title-font sm:text-3xl text-l mb-4 font-bold text-gray-800 text-center md:text-left">
             Career Overview
           </h1>
           {highlights.map((highlight, index) => (
-            <div key={index} className="mb-2 text-sm flex w-full sm:w-3/4 border-b border-gray-100 leading-relaxed">
+            <div key={index} className="mb-2 text-sm flex w-full sm:w-3/4 border-b border-gray-800 leading-relaxed">
               <p className="w-1/3">{highlight.period}</p>
               <p className="w-2/3">{highlight.name}</p>
             </div>
@@ -37,7 +47,7 @@ export default function About() {
       </div>
       <div className="container mx-auto flex px-10 md:py-4 md:flex-row flex-col items-center justify-center">
         <div className="mb-8 leading-loose sm:w-3/4 text-semi-bold">
-          <h1 className="sm:text-3xl text-lg mb-4 font-bold text-gray-100 text-center md:text-left">
+          <h1 className="sm:text-3xl text-lg mb-4 font-bold text-gray-800 text-center md:text-left">
             About Me
           </h1>
           <p className="mb-4 sm:text-lg">I&apos;m a Front-End Web Developer with a passion for learning.</p>
@@ -52,12 +62,11 @@ export default function About() {
             I&apos;m currently living in Tokyo with my wife and our toy poodle.
             When I&apos; not coding, you can find me walking my dog or eating at one of my favorite restaurants around Tokyo.
           </p>
-          <p className="text-lg font-semibold cursor-pointer flashing-text mb-2" onClick={() => setShowMap(!showMap)}>
-            {currentLocation && currentLocation.description}, anyone? 👉
-          </p>
+          <p className="sm:text-lg">Here is one of my favorites 👉 <a href="#" className="text-lg ml-3 font-semibold cursor-pointer pulse-text" onClick={(e) => { e.preventDefault(); setShowMap(!showMap); }}>{showMap ? "Hide map" : (currentLocation && currentLocation.description + ", anyone?")}</a></p>
+
         </div>
       </div>
-        {showMap && <div className="container mx-auto flex px-10 md:py-4 md:flex-row flex-col items-center justify-center sm:w-3/4">
+        {showMap && <div className="container mx-auto flex px-10 md:flex-row flex-col items-center justify-center sm:w-3/4">
           <Map
             lat={currentLocation && currentLocation.coordinates.lat}
             lng={currentLocation && currentLocation.coordinates.lng}

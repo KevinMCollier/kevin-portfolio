@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import mapboxgl from 'mapbox-gl';
 import PropTypes from 'prop-types';
+import './Global.css';
+
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_KEY;
 
@@ -47,7 +49,7 @@ export default function Map({ lng, lat, address, name, link }) {
     <section id="map" className="relative mb-20">
       <h2 className="text-center text-lg font-bold mb-5">
         Why not try
-        <a href={link} target="_blank" rel="noopener noreferrer" className="hover:underline ml-1">
+        <a href={link} target="_blank" rel="noopener noreferrer" className="hover:underline ml-1 pulse-text">
           {name}?
         </a>
       </h2>
