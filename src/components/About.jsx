@@ -65,7 +65,7 @@ export default function About() {
           <p className="mb-4 sm:text-lg">
             I&apos;m originally from Arizona in the United States, but I&apos;ve been living overseas for the past 12 years - one year in the UK, one year in Sweden, and 10+ years in Japan.
             I&apos;m currently living in Tokyo with my wife and our toy poodle.
-            When I&apos; not coding, you can find me walking my dog or eating at one of my favorite restaurants around Tokyo.
+            When I&apos;m not coding, you can find me walking my dog or eating at one of my favorite restaurants around Tokyo.
           </p>
           <p className="sm:text-lg">Here is one of my favorites 👉 <a href="#" className="text-lg ml-3 font-semibold cursor-pointer pulse-text" onClick={(e) => { e.preventDefault(); setShowMap(!showMap); }}>{showMap ? "Hide map" : (currentLocation && currentLocation.description + ", anyone?")}</a></p>
 
