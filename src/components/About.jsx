@@ -24,12 +24,17 @@ export default function About() {
           />
           <div className="container px-5 py-5 mx-auto flex flex-col justify-center">
             <div className="justify-center text-center">
-              <div className="inline-block mr-10 text-4xl text-forest-green hover:text-deep-cyan">
+              <div className="inline-block mr-10 text-4xl text-forest-green hover:text-deep-cyan align-middle">
                 <a href="https://github.com/KevinMCollier" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
               </div>
-              <div className="inline-block text-4xl text-forest-green hover:text-deep-cyan">
+              <div className="inline-block mr-10 text-4xl text-forest-green hover:text-deep-cyan align-middle">
                 <a href="https://www.linkedin.com/in/kevin-collier/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
               </div>
+            <div className="inline-block text-white text-sm bg-forest-green hover:bg-deep-cyan rounded py-2 px-4 align-middle">
+              <a href="/Collier_Kevin_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                Resume
+              </a>
+            </div>
             </div>
           </div>
         </div>

@@ -23,7 +23,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative h-screen">
+    <section id="contact">
       <div className="container px-5 py-5 mx-auto flex sm:flex-nowrap flex-wrap justify-center">
         <form
           data-netlify="true"
@@ -74,7 +74,7 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="text-white bg-periwinkle border-0 py-2 px-6 focus:outline-none hover:bg-deep-cyan rounded text-lg md:float-right">
+              className="text-white bg-deep-cyan border-0 py-2 px-6 focus:outline-none hover:bg-sand-leather hover:text-gray-800 rounded text-lg md:float-right">
               Submit
             </button>
           </div>
