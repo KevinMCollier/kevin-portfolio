@@ -55,7 +55,7 @@ export default function About() {
           <h1 className="sm:text-3xl text-lg mb-4 font-bold text-gray-800 text-center md:text-left">
             About Me
           </h1>
-          <p className="mb-4 sm:text-lg">I&apos;m a Full-Stack Web Developer with a passion for learning.</p>
+          <p className="mb-4 sm:text-lg">I&apos;m a Frontend Web Developer with a passion for learning.</p>
           <p className="mb-4 sm:text-lg">
             My interest in software engineering started to blossom as I began looking further into potential solutions to problems in the L&D field. I want to have a career where I can contribute hands-on to solutions in both the education field and beyond. My long term goal is to create apps that improve the way we learn and grow.
           </p>
