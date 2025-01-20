@@ -33,7 +33,7 @@ export default function About() {
         </section>
         <aside className="image-section">
           <img
-            src="src/kevin-standing-profile.JPG"
+            src="src/kevin-standing-profile.jpg"
             alt="Profile Picture"
             className="profile-pic"
           />
