@@ -12,7 +12,7 @@ export default function About() {
           </p>
           <br/>
           <p>
-            My goal is to build and support the teams that will do great work together.
+            My goal is to build and support the teams that will make a lasting impact.
           </p>
 
         <div className="signature-container">
