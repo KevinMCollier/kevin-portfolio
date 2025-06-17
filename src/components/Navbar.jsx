@@ -8,15 +8,15 @@ export default function Navbar() {
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <div className="title-font font-medium text-white mb-4 md:mb-0">
           <a href="#banner" className="ml-3 text-4xl hover:text-sand-leather">
-            Kevin Collier
+            Collier Consulting
           </a>
         </div>
         <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base text-white justify-center">
           <a href="#projects" className="mr-5 hover:text-sand-leather">
-            Past Work
+            The Coach Call
           </a>
           <a href="#about" className="mr-5 hover:text-sand-leather">
-            About Me
+            About
           </a>
         </nav>
         <a
