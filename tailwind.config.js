@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        'sand-leather': '#b4a67d',
         'midnight-navy': '#0F1A3C'
       }
     },
