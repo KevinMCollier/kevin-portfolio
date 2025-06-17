@@ -7,11 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'forest-green': '#18523d',
-        'periwinkle': '#75bbd2',
-        'turqoise': '#00ac97',
-        'deep-cyan': '#2d97aa',
-        'sand-leather': '#b4a67d'
+        'midnight-navy': '#0F1A3C'
       }
     },
   },
