@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import AboutCollier from "./components/AboutCollier";
+import CoachCall from "./components/CoachCall";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <Banner />
         <AboutCollier />
+        <CoachCall />
         <About />
         <Contact />
         <Footer />
