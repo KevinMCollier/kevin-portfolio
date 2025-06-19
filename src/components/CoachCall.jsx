@@ -1,26 +1,47 @@
+import CoachGraphic from "/public/coach-call-graphic.svg";
+
 export default function CoachCall() {
   return (
     <section className="bg-coach-blue">
       <div
         className="
           mx-auto max-w-7xl
-          flex            /* default = justify-start */
+          flex flex-col md:flex-row
+          justify-center items-center
           px-6 lg:px-12
-          py-24 lg:py-32
+          py-20 lg:py-28
+          gap-10 lg:gap-14            /* space between text & icon */
+          min-h-[70vh]
+          text-center md:text-left
         "
       >
-        <h1
+        {/* headline */}
+        <div
           className="
-            font-mont font-black leading-[0.9] tracking-tight
-            text-5xl sm:text-6xl md:text-7xl lg:text-[7rem]  /* one notch smaller */
-            ml-8 lg:ml-16                                    /* slight inward nudge */
+            flex flex-col space-y-4
+            font-mont font-black tracking-tight
+            leading-[1.12]
+            text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem]
             text-black
           "
         >
-          THE<br />
-          COACH<br />
-          CALL
-        </h1>
+          <span>THE</span>
+          <span>COACH</span>
+          <span>CALL</span>
+        </div>
+
+        {/* graphic */}
+        <img
+          src={CoachGraphic}
+          alt=""
+          className="
+            flex-none
+            w-28 sm:w-36 md:w-40 lg:w-52
+            h-auto
+            lg:-mt-12            /* lift ~48 px on large screens */
+          "
+          loading="lazy"
+        />
       </div>
     </section>
   );
