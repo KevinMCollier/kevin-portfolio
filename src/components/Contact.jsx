@@ -1,84 +1,111 @@
-import React from "react";
+/* src/components/ContactSplit.jsx */
+import { useState } from 'react';
 
-export default function Contact() {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [message, setMessage] = React.useState("");
+export default function ContactSplit() {
+  const [showForm, setShowForm] = useState(false);
 
-  function encode(data) {
-    return Object.keys(data)
-      .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, email, message }),
-    })
-      .then(() => alert("Message sent!"))
-      .catch((error) => alert(error));
-  }
+  /* --- reusable button style helper --- */
+  const btn = (...classes) =>
+    `block w-full text-center font-semibold px-6 py-3 rounded-lg transition ${classes.join(' ')}`;
 
   return (
-    <section id="contact">
-      <div className="container px-5 py-5 mx-auto flex sm:flex-nowrap flex-wrap justify-center">
-        <form
-          data-netlify="true"
-          name="contact"
-          onSubmit={handleSubmit}
-          className="lg:w-2/3 md:w-full flex flex-wrap w-full md:py-8 mt-8 md:mt-0">
-          <input type="hidden" name="form-name" value="contact" />
-          <h2 className="text-gray-800 sm:text-3xl text-2xl mb-8 font-bold title-font w-full text-center">
-            Contact Me
+    <section className="bg-off-white">
+      {/* ---------- TOP GRID ---------- */}
+      <div className="mx-auto max-w-7xl grid gap-10 px-6 lg:px-12 py-20 lg:py-24 md:grid-cols-3">
+
+        {/* 1 — Heading */}
+        <div className="row-span-2">
+          <h2 className="font-mont font-black text-midnight-navy text-4xl sm:text-5xl lg:text-6xl leading-[1.1]">
+            Let’s<br />Connect
           </h2>
-          <div className="md:w-1/2 pr-4 mb-4">
-            <div className="relative mb-4">
-              <label htmlFor="name" className="leading-7 text-sm text-gray-400">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="w-full bg-gray-300 rounded border border-gray-300 focus:border-deep-cyan focus:ring-2 focus:ring-turqoise text-base outline-none text-gray-800 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                onChange={(e) => setName(e.target.value)}
-              />
-            </div>
-            <div className="relative mb-4">
-              <label htmlFor="email" className="leading-7 text-sm text-gray-400">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full bg-gray-300 rounded border border-gray-300 focus:border-deep-cyan focus:ring-2 focus:ring-turqoise text-base outline-none text-gray-800 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-          </div>
-          <div className="md:w-1/2 md:pl-4">
-            <div className="relative mb-4">
-              <label htmlFor="message" className="leading-7 text-sm text-gray-400">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                className="w-full bg-gray-300 rounded border border-gray-300 focus:border-deep-cyan focus:ring-2 focus:ring-turqoise h-40 text-base outline-none text-gray-800 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                onChange={(e) => setMessage(e.target.value)}
-              ></textarea>
-            </div>
+        </div>
+
+        {/* 2 — Mail list */}
+        <div>
+          <a
+            href="https://yoursubscribe.com"
+            className={btn('bg-copper-rust text-off-white hover:bg-copper-rust/90')}
+          >
+            Join Mailing List
+          </a>
+        </div>
+
+        {/* 3 — Calendly */}
+        <div>
+          <a
+            href="https://calendly.com/yourlink/15min"
+            target="_blank" rel="noopener noreferrer"
+            className={btn(
+              'border-2 border-midnight-navy text-midnight-navy',
+              'hover:bg-midnight-navy hover:text-off-white'
+            )}
+          >
+            Book 15-Minute Call
+          </a>
+        </div>
+
+        {/* 4 — Inquiry toggle / form */}
+        <div className="md:col-span-2">
+          {!showForm ? (
             <button
-              type="submit"
-              className="text-white bg-deep-cyan border-0 py-2 px-6 focus:outline-none hover:bg-sand-leather hover:text-gray-800 rounded text-lg md:float-right">
-              Submit
+              onClick={() => setShowForm(true)}
+              className={btn('underline underline-offset-4 text-copper-rust')}
+            >
+              Send Inquiry →
             </button>
-          </div>
-        </form>
+          ) : (
+            <form
+              action="https://formspree.io/f/yourFormID"          /* ← replace */
+              method="POST"
+              className="space-y-4"
+            >
+              <div className="flex gap-4">
+                <input
+                  required
+                  name="name"
+                  placeholder="Name"
+                  className="flex-1 border border-stone-grey rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-copper-rust"
+                />
+                <input
+                  required
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  className="flex-1 border border-stone-grey rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-copper-rust"
+                />
+              </div>
+              <textarea
+                required
+                name="message"
+                placeholder="How can we help?"
+                rows={4}
+                className="w-full border border-stone-grey rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-copper-rust"
+              />
+              <div className="flex gap-4">
+                <button type="submit" className={btn('bg-copper-rust text-off-white hover:bg-copper-rust/90 flex-1')}>
+                  Send
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowForm(false)}
+                  className={btn('border border-graphite text-graphite flex-1')}
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          )}
+        </div>
+      </div>
+
+      {/* ---------- CROPPED IMAGE ---------- */}
+      <div className="h-48 sm:h-60 lg:h-72 overflow-hidden">
+        <img
+          src="/public/arizona-canyon-nicolas-cool.jpg"                       /* path to your asset */
+          alt="Canyon opening toward the sky"
+          className="h-full w-full object-cover object-center"
+          loading="lazy"
+        />
       </div>
     </section>
   );
