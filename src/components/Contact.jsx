@@ -32,7 +32,7 @@ export default function Contact() {
           className="lg:w-2/3 md:w-full flex flex-wrap w-full md:py-8 mt-8 md:mt-0">
           <input type="hidden" name="form-name" value="contact" />
           <h2 className="text-gray-800 sm:text-3xl text-2xl mb-8 font-bold title-font w-full text-center">
-            Contact Me <span role="img" aria-label="memo">📝</span>
+            Contact Me
           </h2>
           <div className="md:w-1/2 pr-4 mb-4">
             <div className="relative mb-4">

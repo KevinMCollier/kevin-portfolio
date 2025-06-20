@@ -16,7 +16,7 @@ export default function About() {
           <h1 className="title-font sm:text-5xl text-l mb-4 font-bold text-gray-800 text-center md:text-left">
             About Kevin
           </h1>
-          <p className="max-w-[50ch] text-base leading-relaxed">
+          <p className="max-w-[50ch] text-base leading-relaxed text-xl">
             With 11+ years in education and business leadership, I’ve helped over 400 professionals in Japan unlock their potential through consistent, meaningful dialogue.
             <br />
             <br />

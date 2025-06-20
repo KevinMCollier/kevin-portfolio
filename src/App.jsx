@@ -5,6 +5,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import AboutCollier from "./components/AboutCollier";
 import CoachCall from "./components/CoachCall";
+import CoachCallDetails from "./components/CoachCallDetails";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Banner />
         <AboutCollier />
         <CoachCall />
+        <CoachCallDetails />
         <About />
         <Contact />
         <Footer />

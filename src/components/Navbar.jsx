@@ -13,7 +13,7 @@ export default function Navbar() {
         {/* Links */}
         <nav className="md:ml-6 md:py-1 md:pl-6 md:border-l md:border-off-white/20
                         flex flex-wrap items-center text-base text-off-white">
-          <a href="#projects" className="mr-6 hover:text-copper-rust transition">
+          <a href="#CoachCall" className="mr-6 hover:text-copper-rust transition">
             The&nbsp;Coach&nbsp;Call
           </a>
           <a href="#about" className="mr-6 hover:text-copper-rust transition">
