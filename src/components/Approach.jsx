@@ -7,7 +7,7 @@ const steps = [
   { title: 'Thrive Together',   desc: 'Action plans, coaching, and feedback loops turn alignment into results.' },
 ];
 
-export default function AboutCollier() {
+export default function Approach() {
   return (
     <>
       {/* OUR VALUES + THREE STEPS */}
@@ -23,7 +23,7 @@ export default function AboutCollier() {
               mb-4             /* tighter gap above “Listen” */
             "
           >
-            Our&nbsp;Values
+            Our&nbsp;Approach
           </h2>
 
           {/* steps */}
