@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import CoachCall from "./components/CoachCall";
 import CoachCallDetails from "./components/CoachCallDetails";
 import Approach from "./components/Approach";
+import StatsGrid from "./components/StatsGrid";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Navbar />
         <Banner />
         <Approach />
+        <StatsGrid />
         <CoachCall />
         <CoachCallDetails />
         <About />
