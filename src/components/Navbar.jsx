@@ -9,6 +9,10 @@ export default function Navbar() {
           Collier Consulting
         </a>
 
+            <span className="ml-4 text-xs text-off-white/70 tracking-wide hidden sm:inline">
+      Tokyo, JP
+    </span>
+
         <nav className="md:ml-6 md:pl-6 md:border-l md:border-off-white/20 flex flex-wrap items-center text-base text-off-white">
           <a href="#CoachCall" className="mr-6 hover:text-copper-rust transition">
             The&nbsp;Coach&nbsp;Call

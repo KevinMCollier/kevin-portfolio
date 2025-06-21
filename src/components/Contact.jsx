@@ -1,8 +1,3 @@
-/* src/components/ContactSplit.jsx
-   Netlify‑ready version: uses Netlify Forms instead of Formspree
-   Updated copy – refined pre‑launch disclaimer (no “beta” language)
-*/
-
 import { useState } from 'react';
 
 export default function ContactSplit() {
