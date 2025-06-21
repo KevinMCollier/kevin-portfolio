@@ -28,10 +28,14 @@ export default function CoachCallDetails() {
 
         {/* LEFT — headline & session themes */}
         <div>
-          <h2 className="text-midnight-navy font-bold text-4xl sm:text-5xl leading-relaxed mb-8">
-            Ongoing&nbsp;1-on-1 Coaching<br />
-            <span className="text-copper-rust">&amp; Monthly Culture Reports</span>
+{/* headline */}
+          <h2 className="font-mont font-bold text-midnight-navy text-4xl sm:text-3xl md:text-4xl leading-tight mb-8">
+            Ongoing&nbsp;1-on-1&nbsp;Coaching<br />
+            <span className="block mt-4 text-copper-rust">
+              &amp;&nbsp;Monthly&nbsp;Culture&nbsp;Reports
+            </span>
           </h2>
+
 
           <p className="text-graphite text-xl leading-relaxed">
             Every session is built to help your people&nbsp;—
