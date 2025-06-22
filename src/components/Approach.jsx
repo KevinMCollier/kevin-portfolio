@@ -7,7 +7,7 @@ const steps = [
 export default function Approach() {
   return (
     <>
-      <section className="bg-off-white py-12 lg:py-16">
+      <section className="bg-off-white py-20 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-mont font-black text-copper-rust text-3xl sm:text-5xl mb-8">
             Our&nbsp;Approach
