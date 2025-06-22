@@ -42,7 +42,7 @@ export default function CoachCallDetails() {
             Every session is built to help your people&nbsp;—
           </p>
 
-          <ul className="mt-8 space-y-4 text-graphite text-xl leading-relaxed list-disc list-inside">
+          <ul className="mt-2 space-y-4 text-graphite text-xl leading-relaxed list-disc list-inside">
             <li>
               <strong>Reflect&nbsp;&amp;&nbsp;Reframe</strong> challenges into opportunities
             </li>
