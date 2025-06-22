@@ -1,15 +1,14 @@
 import { useState } from 'react';
 
 export default function ContactSplit() {
-  const [open, setOpen] = useState(false);
+  const [openInquiry, setOpenInquiry] = useState(false);
+  const [openSignup, setOpenSignup] = useState(false);
 
-  // Tailwind-utility helper
   const btn = (...c) =>
     `block w-full text-center font-semibold px-6 py-2 rounded-lg transition ${c.join(
       ' '
     )}`;
 
-  // Calendly pop-up
   const openCalendly = () => {
     window.Calendly.initPopupWidget({
       url: 'https://calendly.com/kevin-collier-consulting/30min',
@@ -29,15 +28,15 @@ export default function ContactSplit() {
 
         {/* ---------- RIGHT : CTA stack ---------- */}
         <div className="flex-none w-full max-w-sm space-y-4">
-          {/* Mailing list */}
-          <a
-            href="https://yoursubscribe.com"
+          {/* Join List (opens modal) */}
+          <button
+            onClick={() => setOpenSignup(true)}
             className={btn('bg-copper-rust text-off-white hover:bg-copper-rust/90')}
           >
             Join Early-Access List
-          </a>
+          </button>
 
-          {/* Calendly pop-up */}
+          {/* Book Call */}
           <button
             onClick={openCalendly}
             className={btn(
@@ -48,9 +47,9 @@ export default function ContactSplit() {
             Book Quick Call
           </button>
 
-          {/* Inquiry → Netlify modal */}
+          {/* Inquiry Modal */}
           <button
-            onClick={() => setOpen(true)}
+            onClick={() => setOpenInquiry(true)}
             className={btn(
               'border border-graphite text-graphite',
               'hover:bg-graphite hover:text-off-white'
@@ -59,7 +58,6 @@ export default function ContactSplit() {
             Send Inquiry
           </button>
 
-          {/* Pre-launch text */}
           <p className="text-xs text-graphite leading-snug pt-2">
             Collier Consulting and its flagship service — <em>The&nbsp;Coach&nbsp;Call</em> — are in
             <span className="italic"> pre-launch</span>. Join the list to secure priority onboarding.
@@ -67,7 +65,7 @@ export default function ContactSplit() {
         </div>
       </div>
 
-      {/* ================= CROPPED HERO IMAGE ================= */}
+      {/* ================= HERO IMAGE ================= */}
       <div className="h-40 sm:h-56 lg:h-64 overflow-hidden">
         <img
           src="/arizona-canyon-nicolas-cool.jpg"
@@ -77,19 +75,88 @@ export default function ContactSplit() {
         />
       </div>
 
-      {/* ================= INQUIRY MODAL ================= */}
-      {open && (
+      {/* ================= MODAL: JOIN LIST ================= */}
+      {openSignup && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
-          onClick={() => setOpen(false)}          // close by clicking backdrop
+          onClick={() => setOpenSignup(false)}
+        >
+          <div
+            className="bg-off-white w-full max-w-md rounded-xl p-8 space-y-6 relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="text-midnight-navy font-bold text-2xl">Join the List</h3>
+            <form
+              action="https://kevin-collier.us8.list-manage.com/subscribe/post?u=3223839310f18f06bdb1456c2&id=7987856aee&f_id=004972e1f0"
+              method="post"
+              target="_blank"
+              noValidate
+              className="space-y-4"
+            >
+              <input
+                type="email"
+                name="EMAIL"
+                placeholder="Your email"
+                required
+                className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
+              />
+              {/* Honeypot */}
+              <div className="absolute -left-[5000px]" aria-hidden="true">
+                <input
+                  type="text"
+                  name="b_3223839310f18f06bdb1456c2_7987856aee"
+                  tabIndex="-1"
+                  defaultValue=""
+                />
+              </div>
+              <button
+                type="submit"
+                className={btn(
+                  'bg-copper-rust text-off-white hover:bg-copper-rust/90'
+                )}
+              >
+                Subscribe
+              </button>
+              {/* Mailchimp badge (Free plan requirement) */}
+              <p className="text-center opacity-70">
+                <a
+                  href="http://eepurl.com/jhC0UY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Mailchimp – email marketing made easy and fun"
+                >
+                  <img
+                    src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
+                    alt="Intuit Mailchimp"
+                    className="h-6 mx-auto"
+                  />
+                </a>
+              </p>
+            </form>
+
+            {/* Close icon */}
+            <button
+              onClick={() => setOpenSignup(false)}
+              aria-label="Close modal"
+              className="absolute top-4 right-4 text-graphite hover:text-midnight-navy"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* ================= MODAL: INQUIRY ================= */}
+      {openInquiry && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
+          onClick={() => setOpenInquiry(false)}
         >
           <div
             className="bg-off-white w-full max-w-lg rounded-xl p-8 space-y-6 relative"
-            onClick={(e) => e.stopPropagation()}  // keep clicks inside modal
+            onClick={(e) => e.stopPropagation()}
           >
             <h3 className="text-midnight-navy font-bold text-2xl">Send an Inquiry</h3>
-
-            {/* Netlify form */}
             <form
               name="inquiry"
               method="POST"
@@ -97,19 +164,13 @@ export default function ContactSplit() {
               data-netlify-honeypot="bot-field"
               className="space-y-4"
             >
-              {/* Netlify: required hidden inputs */}
               <input type="hidden" name="form-name" value="inquiry" />
               <input type="hidden" name="redirect" value="/thank-you.html" />
-
-              {/* Honeypot (anti-spam) */}
               <p className="hidden">
                 <label>
-                  Don’t fill this out:{' '}
-                  <input name="bot-field" />
+                  Don’t fill this out: <input name="bot-field" />
                 </label>
               </p>
-
-              {/* Visible fields */}
               <input
                 required
                 name="name"
@@ -130,28 +191,26 @@ export default function ContactSplit() {
                 placeholder="How can we help?"
                 className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
               />
-
-              {/* Buttons */}
               <div className="flex gap-4">
                 <button
                   type="submit"
-                  className={btn('flex-1 bg-copper-rust text-off-white hover:bg-copper-rust/90')}
+                  className={btn(
+                    'flex-1 bg-copper-rust text-off-white hover:bg-copper-rust/90'
+                  )}
                 >
                   Send
                 </button>
                 <button
                   type="button"
-                  onClick={() => setOpen(false)}
+                  onClick={() => setOpenInquiry(false)}
                   className={btn('flex-1 border border-graphite text-graphite')}
                 >
                   Cancel
                 </button>
               </div>
             </form>
-
-            {/* Close icon */}
             <button
-              onClick={() => setOpen(false)}
+              onClick={() => setOpenInquiry(false)}
               aria-label="Close modal"
               className="absolute top-4 right-4 text-graphite hover:text-midnight-navy"
             >
