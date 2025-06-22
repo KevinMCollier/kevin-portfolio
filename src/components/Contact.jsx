@@ -3,33 +3,26 @@ import { useState } from 'react';
 export default function ContactSplit() {
   const [open, setOpen] = useState(false);
 
-  /* uniform button helper */
+  // uniform button helper
   const btn = (...c) =>
     `block w-full text-center font-semibold px-6 py-2 rounded-lg transition ${c.join(
       ' '
     )}`;
 
+  // open Calendly pop-up
+  const openCalendly = () => {
+    window.Calendly.initPopupWidget({
+      url: 'https://calendly.com/kevin-collier-consulting/30min'
+    });
+  };
+
   return (
-    <section className="bg-off-white">
+    <section id="contact" className="bg-off-white">
       {/* ================= MAIN FLEX ROW ================= */}
-      <div
-        className="
-          mx-auto max-w-7xl
-          px-6 lg:px-12
-          py-20 lg:py-24
-          flex flex-col md:flex-row md:items-start md:justify-center
-          gap-10 md:gap-14
-        "
-      >
+      <div className="mx-auto max-w-7xl px-6 lg:px-12 py-20 lg:py-24 flex flex-col md:flex-row md:items-start md:justify-center gap-10 md:gap-14">
+
         {/* ---------- LEFT : headline ---------- */}
-        <h2
-          className="
-            flex-none max-w-md
-            font-mont font-black
-            text-midnight-navy
-            text-3xl sm:text-4xl leading-tight
-          "
-        >
+        <h2 className="flex-none max-w-md font-mont font-black text-midnight-navy text-3xl sm:text-4xl leading-tight">
           Get&nbsp;in&nbsp;touch&nbsp;—
           <br className="hidden sm:block" />
           <span className="text-copper-rust">learn more</span>
@@ -39,28 +32,24 @@ export default function ContactSplit() {
         <div className="flex-none w-full max-w-sm space-y-4">
           {/* Mailing-list */}
           <a
-            href="https://yoursubscribe.com" /* replace with Mailchimp (or similar) */
-            className={btn(
-              'bg-copper-rust text-off-white hover:bg-copper-rust/90'
-            )}
+            href="https://yoursubscribe.com"
+            className={btn('bg-copper-rust text-off-white hover:bg-copper-rust/90')}
           >
-            Join Early‑Access List
+            Join Early-Access List
           </a>
 
-          {/* Calendly */}
-          <a
-            href="https://calendly.com/yourlink/15min" /* replace */
-            target="_blank"
-            rel="noopener noreferrer"
+          {/* Calendly pop-up */}
+          <button
+            onClick={openCalendly}
             className={btn(
               'border-2 border-midnight-navy text-midnight-navy',
               'hover:bg-midnight-navy hover:text-off-white'
             )}
           >
-            Book 15‑Minute Call
-          </a>
+            Book Quick Call
+          </button>
 
-          {/* Inquiry → modal */}
+          {/* Inquiry → Netlify modal */}
           <button
             onClick={() => setOpen(true)}
             className={btn(
@@ -71,9 +60,9 @@ export default function ContactSplit() {
             Send Inquiry
           </button>
 
-          {/* Pre‑launch disclaimer */}
+          {/* Pre-launch disclaimer */}
           <p className="text-xs text-graphite leading-snug pt-2">
-            Collier Consulting and its flagship service — <em>The&nbsp;Coach&nbsp;Call</em> — are currently in <span className="italic">pre‑launch</span>. Join the early‑access list to secure priority onboarding when our first cohort opens.
+            Collier Consulting and its flagship service — <em>The&nbsp;Coach&nbsp;Call</em> — are currently in <span className="italic">pre-launch</span>. Join the early-access list to secure priority onboarding when our first cohort opens.
           </p>
         </div>
       </div>
@@ -81,70 +70,57 @@ export default function ContactSplit() {
       {/* ================= CROPPED HERO IMAGE ================= */}
       <div className="h-40 sm:h-56 lg:h-64 overflow-hidden">
         <img
-          src="/arizona-canyon-nicolas-cool.jpg" /* adjust path if needed */
+          src="/arizona-canyon-nicolas-cool.jpg"
           alt="Canyon opening toward the sky"
           className="h-full w-full object-cover object-center"
           loading="lazy"
         />
       </div>
 
-      {/* ================= INQUIRY MODAL (Netlify Form) ================= */}
+      {/* ================= INQUIRY MODAL ================= */}
       {open && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
-          onClick={() => setOpen(false)} /* click backdrop to close */
+          onClick={() => setOpen(false)}
         >
           <div
             className="bg-off-white w-full max-w-lg rounded-xl p-8 space-y-6 relative"
-            onClick={(e) => e.stopPropagation()} /* stop inner clicks */
+            onClick={(e) => e.stopPropagation()}
           >
-            <h3 className="text-midnight-navy font-bold text-2xl">
-              Send an Inquiry
-            </h3>
+            <h3 className="text-midnight-navy font-bold text-2xl">Send an Inquiry</h3>
 
-            {/* Netlify form — name="inquiry" ties to hidden input */}
-            <form
-              name="inquiry"
-              method="POST"
-              data-netlify="true"
-              className="space-y-4"
-            >
-              {/* Netlify hidden field is required */}
+            {/* Netlify form */}
+            <form name="inquiry" method="POST" data-netlify="true" className="space-y-4">
               <input type="hidden" name="form-name" value="inquiry" />
 
               <input
                 required
                 name="name"
                 placeholder="Name"
-                className="w-full border border-stone-grey rounded px-4 py-2
-                           focus:ring-2 focus:ring-copper-rust focus:outline-none"
+                className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
               />
               <input
                 required
                 type="email"
                 name="email"
                 placeholder="Email"
-                className="w-full border border-stone-grey rounded px-4 py-2
-                           focus:ring-2 focus:ring-copper-rust focus:outline-none"
+                className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
               />
               <textarea
                 required
                 name="message"
                 rows={4}
                 placeholder="How can we help?"
-                className="w-full border border-stone-grey rounded px-4 py-2
-                           focus:ring-2 focus:ring-copper-rust focus:outline-none"
+                className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
               />
 
-              {/* (Optional) Netlify reCAPTCHA */}
+              {/* Optional Netlify reCAPTCHA */}
               {/* <div data-netlify-recaptcha="true"></div> */}
 
               <div className="flex gap-4">
                 <button
                   type="submit"
-                  className={btn(
-                    'flex-1 bg-copper-rust text-off-white hover:bg-copper-rust/90'
-                  )}
+                  className={btn('flex-1 bg-copper-rust text-off-white hover:bg-copper-rust/90')}
                 >
                   Send
                 </button>

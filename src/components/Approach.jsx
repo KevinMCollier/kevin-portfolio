@@ -9,11 +9,11 @@ export default function Approach() {
     <>
       <section className="bg-off-white py-12 lg:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-mont font-black text-copper-rust text-3xl sm:text-5xl mb-6">
+          <h2 className="font-mont font-black text-copper-rust text-3xl sm:text-5xl mb-8">
             Our&nbsp;Approach
           </h2>
 
-          <ul className="space-y-8">
+          <ul className="space-y-8 pl-6 sm:pl-8">
             {steps.map(({ title, desc }) => (
               <li key={title}>
                 <h3 className="font-mont font-extrabold text-midnight-navy text-3xl sm:text-4xl">
@@ -25,6 +25,7 @@ export default function Approach() {
               </li>
             ))}
           </ul>
+
         </div>
       </section>
 
