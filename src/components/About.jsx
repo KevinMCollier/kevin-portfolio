@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <section id="about" className="bg-stone-grey text-midnight-navy">
-      <div className="container mx-auto flex px-5 pt-20 pb-10 md:flex-row flex-col items-center">
+      <div className="container mx-auto flex px-5 pt-20 pb-20 md:flex-row flex-col items-center">
         {/* -------- Photo + Highlights -------- */}
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-full mb-12 md:mb-0 flex flex-col items-center">
           <img
