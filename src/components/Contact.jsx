@@ -1,11 +1,15 @@
+/* src/components/ContactSplit.jsx */
 import { useState } from 'react';
 
 export default function ContactSplit() {
   const [openInquiry, setOpenInquiry] = useState(false);
   const [openSignup, setOpenSignup] = useState(false);
 
+  /** 🔸 Unified button helper
+      – identical size / typography / border thickness
+      – pass extra classes for color & hovers */
   const btn = (...c) =>
-    `block w-full text-center font-semibold px-6 py-2 rounded-lg transition ${c.join(
+    `block w-full text-center text-base font-semibold px-6 py-2 rounded-lg transition ${c.join(
       ' '
     )}`;
 
@@ -17,7 +21,7 @@ export default function ContactSplit() {
 
   return (
     <section id="contact" className="bg-off-white">
-      {/* ================= MAIN FLEX ROW ================= */}
+      {/* =============== MAIN FLEX ROW =============== */}
       <div className="mx-auto max-w-7xl px-6 lg:px-12 py-20 lg:py-24 flex flex-col md:flex-row md:items-start md:justify-center gap-10 md:gap-14">
         {/* ---------- LEFT : headline ---------- */}
         <h2 className="flex-none max-w-md font-mont font-black text-midnight-navy text-3xl sm:text-4xl leading-tight">
@@ -31,23 +35,26 @@ export default function ContactSplit() {
           {/* Join List (opens modal) */}
           <button
             onClick={() => setOpenSignup(true)}
-            className={btn('bg-copper-rust text-off-white hover:bg-copper-rust/90')}
+            className={btn(
+              'bg-copper-rust text-off-white',
+              'hover:bg-copper-rust/90'
+            )}
           >
             Join Early-Access List
           </button>
 
-          {/* Book Call */}
+          {/* Book Call – outlined navy */}
           <button
             onClick={openCalendly}
             className={btn(
-              'border-2 border-midnight-navy text-midnight-navy',
+              'border border-midnight-navy text-midnight-navy',
               'hover:bg-midnight-navy hover:text-off-white'
             )}
           >
             Book Quick Call
           </button>
 
-          {/* Inquiry Modal */}
+          {/* Inquiry — outlined graphite */}
           <button
             onClick={() => setOpenInquiry(true)}
             className={btn(
@@ -58,14 +65,16 @@ export default function ContactSplit() {
             Send Inquiry
           </button>
 
+          {/* Pre-launch note */}
           <p className="text-xs text-graphite leading-snug pt-2">
-            Collier Consulting and its flagship service — <em>The&nbsp;Coach&nbsp;Call</em> — are in
+            Collier Consulting and its flagship service —{' '}
+            <em>The Coach Call</em> — are in
             <span className="italic"> pre-launch</span>. Join the list to secure priority onboarding.
           </p>
         </div>
       </div>
 
-      {/* ================= HERO IMAGE ================= */}
+      {/* =============== HERO IMAGE =============== */}
       <div className="h-40 sm:h-56 lg:h-64 overflow-hidden">
         <img
           src="/arizona-canyon-nicolas-cool.jpg"
@@ -75,7 +84,7 @@ export default function ContactSplit() {
         />
       </div>
 
-      {/* ================= MODAL: JOIN LIST ================= */}
+      {/* =============== MODAL: JOIN LIST =============== */}
       {openSignup && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
@@ -85,7 +94,10 @@ export default function ContactSplit() {
             className="bg-off-white w-full max-w-md rounded-xl p-8 space-y-6 relative"
             onClick={(e) => e.stopPropagation()}
           >
-            <h3 className="text-midnight-navy font-bold text-2xl">Join the List</h3>
+            <h3 className="text-midnight-navy font-bold text-2xl">
+              Join the List
+            </h3>
+
             <form
               action="https://kevin-collier.us8.list-manage.com/subscribe/post?u=3223839310f18f06bdb1456c2&id=7987856aee&f_id=004972e1f0"
               method="post"
@@ -100,6 +112,7 @@ export default function ContactSplit() {
                 required
                 className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
               />
+
               {/* Honeypot */}
               <div className="absolute -left-[5000px]" aria-hidden="true">
                 <input
@@ -109,14 +122,17 @@ export default function ContactSplit() {
                   defaultValue=""
                 />
               </div>
+
               <button
                 type="submit"
                 className={btn(
-                  'bg-copper-rust text-off-white hover:bg-copper-rust/90'
+                  'bg-copper-rust text-off-white',
+                  'hover:bg-copper-rust/90'
                 )}
               >
                 Subscribe
               </button>
+
               {/* Mailchimp badge (Free plan requirement) */}
               <p className="text-center opacity-70">
                 <a
@@ -134,7 +150,6 @@ export default function ContactSplit() {
               </p>
             </form>
 
-            {/* Close icon */}
             <button
               onClick={() => setOpenSignup(false)}
               aria-label="Close modal"
@@ -146,7 +161,7 @@ export default function ContactSplit() {
         </div>
       )}
 
-      {/* ================= MODAL: INQUIRY ================= */}
+      {/* =============== MODAL: INQUIRY =============== */}
       {openInquiry && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
@@ -156,7 +171,10 @@ export default function ContactSplit() {
             className="bg-off-white w-full max-w-lg rounded-xl p-8 space-y-6 relative"
             onClick={(e) => e.stopPropagation()}
           >
-            <h3 className="text-midnight-navy font-bold text-2xl">Send an Inquiry</h3>
+            <h3 className="text-midnight-navy font-bold text-2xl">
+              Send an Inquiry
+            </h3>
+
             <form
               name="inquiry"
               method="POST"
@@ -166,11 +184,13 @@ export default function ContactSplit() {
             >
               <input type="hidden" name="form-name" value="inquiry" />
               <input type="hidden" name="redirect" value="/thank-you.html" />
+
               <p className="hidden">
                 <label>
                   Don’t fill this out: <input name="bot-field" />
                 </label>
               </p>
+
               <input
                 required
                 name="name"
@@ -191,11 +211,13 @@ export default function ContactSplit() {
                 placeholder="How can we help?"
                 className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
               />
+
               <div className="flex gap-4">
                 <button
                   type="submit"
                   className={btn(
-                    'flex-1 bg-copper-rust text-off-white hover:bg-copper-rust/90'
+                    'flex-1 bg-copper-rust text-off-white',
+                    'hover:bg-copper-rust/90'
                   )}
                 >
                   Send
@@ -203,12 +225,16 @@ export default function ContactSplit() {
                 <button
                   type="button"
                   onClick={() => setOpenInquiry(false)}
-                  className={btn('flex-1 border border-graphite text-graphite')}
+                  className={btn(
+                    'flex-1 border border-graphite text-graphite',
+                    'hover:bg-graphite hover:text-off-white'
+                  )}
                 >
                   Cancel
                 </button>
               </div>
             </form>
+
             <button
               onClick={() => setOpenInquiry(false)}
               aria-label="Close modal"
