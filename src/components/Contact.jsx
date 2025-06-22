@@ -3,16 +3,16 @@ import { useState } from 'react';
 export default function ContactSplit() {
   const [open, setOpen] = useState(false);
 
-  // uniform button helper
+  // Tailwind-utility helper
   const btn = (...c) =>
     `block w-full text-center font-semibold px-6 py-2 rounded-lg transition ${c.join(
       ' '
     )}`;
 
-  // open Calendly pop-up
+  // Calendly pop-up
   const openCalendly = () => {
     window.Calendly.initPopupWidget({
-      url: 'https://calendly.com/kevin-collier-consulting/30min'
+      url: 'https://calendly.com/kevin-collier-consulting/30min',
     });
   };
 
@@ -20,7 +20,6 @@ export default function ContactSplit() {
     <section id="contact" className="bg-off-white">
       {/* ================= MAIN FLEX ROW ================= */}
       <div className="mx-auto max-w-7xl px-6 lg:px-12 py-20 lg:py-24 flex flex-col md:flex-row md:items-start md:justify-center gap-10 md:gap-14">
-
         {/* ---------- LEFT : headline ---------- */}
         <h2 className="flex-none max-w-md font-mont font-black text-midnight-navy text-3xl sm:text-4xl leading-tight">
           Get&nbsp;in&nbsp;touch&nbsp;—
@@ -30,7 +29,7 @@ export default function ContactSplit() {
 
         {/* ---------- RIGHT : CTA stack ---------- */}
         <div className="flex-none w-full max-w-sm space-y-4">
-          {/* Mailing-list */}
+          {/* Mailing list */}
           <a
             href="https://yoursubscribe.com"
             className={btn('bg-copper-rust text-off-white hover:bg-copper-rust/90')}
@@ -60,9 +59,10 @@ export default function ContactSplit() {
             Send Inquiry
           </button>
 
-          {/* Pre-launch disclaimer */}
+          {/* Pre-launch text */}
           <p className="text-xs text-graphite leading-snug pt-2">
-            Collier Consulting and its flagship service — <em>The&nbsp;Coach&nbsp;Call</em> — are currently in <span className="italic">pre-launch</span>. Join the early-access list to secure priority onboarding when our first cohort opens.
+            Collier Consulting and its flagship service — <em>The&nbsp;Coach&nbsp;Call</em> — are in
+            <span className="italic"> pre-launch</span>. Join the list to secure priority onboarding.
           </p>
         </div>
       </div>
@@ -81,18 +81,35 @@ export default function ContactSplit() {
       {open && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
-          onClick={() => setOpen(false)}
+          onClick={() => setOpen(false)}          // close by clicking backdrop
         >
           <div
             className="bg-off-white w-full max-w-lg rounded-xl p-8 space-y-6 relative"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}  // keep clicks inside modal
           >
             <h3 className="text-midnight-navy font-bold text-2xl">Send an Inquiry</h3>
 
             {/* Netlify form */}
-            <form name="inquiry" method="POST" data-netlify="true" className="space-y-4">
+            <form
+              name="inquiry"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              className="space-y-4"
+            >
+              {/* Netlify: required hidden inputs */}
               <input type="hidden" name="form-name" value="inquiry" />
+              <input type="hidden" name="redirect" value="/thank-you.html" />
 
+              {/* Honeypot (anti-spam) */}
+              <p className="hidden">
+                <label>
+                  Don’t fill this out:{' '}
+                  <input name="bot-field" />
+                </label>
+              </p>
+
+              {/* Visible fields */}
               <input
                 required
                 name="name"
@@ -114,9 +131,7 @@ export default function ContactSplit() {
                 className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
               />
 
-              {/* Optional Netlify reCAPTCHA */}
-              {/* <div data-netlify-recaptcha="true"></div> */}
-
+              {/* Buttons */}
               <div className="flex gap-4">
                 <button
                   type="submit"
@@ -134,7 +149,7 @@ export default function ContactSplit() {
               </div>
             </form>
 
-            {/* close icon */}
+            {/* Close icon */}
             <button
               onClick={() => setOpen(false)}
               aria-label="Close modal"
