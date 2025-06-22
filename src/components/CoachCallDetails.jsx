@@ -27,10 +27,10 @@ export default function CoachCallDetails() {
     )}`;
 
   const bullets = [
-    '20 h saved every month for a 10-person team',
-    '100 % external & unbiased perspective',
-    'Built on proven leadership frameworks',
-    'Craft a world-class culture everyone wants to join',
+    'Reclaim up to 20 hours monthly (per 10 person team) by reducing manager overhead',
+    'Uncover blind spots with an external, unbiased perspective',
+    'Boost staff engagement and improve long-term retention',
+    'Build a team culture that everyone wants to join',
   ];
 
   return (
