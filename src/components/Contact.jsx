@@ -27,7 +27,7 @@ export default function ContactSplit() {
         <h2 className="flex-none max-w-md font-mont font-black text-midnight-navy text-3xl sm:text-4xl leading-tight">
           Get&nbsp;in&nbsp;touch&nbsp;—
           <br className="hidden sm:block" />
-          <span className="text-copper-rust">learn more</span>
+          <span className="text-copper-rust"> learn more</span>
         </h2>
 
         {/* ---------- RIGHT : CTA stack ---------- */}
