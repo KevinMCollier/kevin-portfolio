@@ -1,5 +1,6 @@
 const steps = [
   { title: 'Listen and Understand', desc: 'We start by uncovering motivations, blockers, and ambitions.' },
+  { title: 'Identify Patterns', desc: 'We surface recurring behaviors and dynamics that shape your culture—often before they’re visible.' },
   { title: 'Align Vision', desc: 'Insights translate into clear priorities that link purpose to company goals.' },
   { title: 'Thrive Together', desc: 'Action plans, coaching, and feedback loops turn alignment into results.' },
 ];
