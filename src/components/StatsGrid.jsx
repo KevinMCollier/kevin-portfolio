@@ -1,13 +1,45 @@
+/* src/components/StatsGrid.jsx */
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
 
 const stats = [
-  { count: 4, label: 'Manager hours lost each week firefighting culture conflicts.', suffix: ' h', source: 'Myers-Briggs Institute' },
-  { count: 30, label: 'Hours lost per resignation in interviews & onboarding.', suffix: ' h', source: 'Stratus HR' },
-  { count: 8.8, label: 'Trillion dollars drained by disengagement every year.', suffix: ' T', decimals: 1, source: 'Gallup 2024' },
-  { count: 6, label: 'Times more likely burned-out staff will quit.', suffix: '×', source: 'McKinsey' },
-  { count: 200, label: 'Percent of salary to replace a key leader.', suffix: ' %', source: 'Gallup' },
-  { display: '15–30 min', label: 'Ideal weekly 1:1 cadence—but most teams can’t keep up.', source: 'Gallup' },
+  {
+    count: 1,
+    label: 'Day per week managers lose to admin and stepping in for work their team could own.',
+    suffix: ' d',
+    source: 'McKinsey 2023',
+  },
+  {
+    count: 4,
+    label: 'Manager hours lost each week firefighting culture conflicts.',
+    suffix: ' h',
+    source: 'Myers-Briggs Institute',
+  },
+  {
+    count: 2,
+    label: 'Minutes between digital pings during the workday.',
+    suffix: ' min',
+    source: 'Microsoft Work Index 2025',
+  },
+  {
+    count: 8.8,
+    label: 'Trillion dollars disengagement drains globally every year.',
+    suffix: ' T',
+    decimals: 1,
+    source: 'Gallup 2024',
+  },
+  {
+    count: 6,
+    label: 'Times more likely burned-out staff will quit.',
+    suffix: '×',
+    source: 'McKinsey',
+  },
+  {
+    count: 200,
+    label: 'Percent of salary it costs to replace a key leader.',
+    suffix: ' %',
+    source: 'Gallup',
+  },
 ];
 
 export default function StatsGrid() {
@@ -25,7 +57,12 @@ export default function StatsGrid() {
           >
             <p className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-copper-rust tracking-tight">
               {s.count !== undefined ? (
-                <CountUp end={s.count} decimals={s.decimals || 0} suffix={s.suffix || ''} duration={1.2} />
+                <CountUp
+                  end={s.count}
+                  decimals={s.decimals || 0}
+                  suffix={s.suffix || ''}
+                  duration={1.2}
+                />
               ) : (
                 s.display
               )}
