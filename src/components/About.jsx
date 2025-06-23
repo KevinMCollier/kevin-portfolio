@@ -56,6 +56,7 @@ export default function About() {
             international—navigate an increasingly diverse workforce. I work to preserve
             the best of Japanese work culture while welcoming fresh perspectives,
             bridging communication gaps, and turning that variety into sustainable growth.
+            Every workplace has patterns—of behavior, motivation, and miscommunication. I help teams surface them, understand them, and shift them for good.
           </p>
 
           <p className="text-lg font-semibold">
