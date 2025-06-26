@@ -67,9 +67,9 @@ export default function ContactSplit() {
 
           {/* Pre-launch note */}
           <p className="text-xs text-graphite leading-snug pt-2">
-            Collier Consulting and its flagship service —{' '}
-            <em>The Coach Call</em> — are in
-            <span className="italic"> pre-launch</span>. Join the list to secure priority onboarding.
+
+            <em>The Coach Call</em> — is coming soon.
+            <span className="italic"> pre-launch</span>. Join the waitlist to be first.
           </p>
         </div>
       </div>

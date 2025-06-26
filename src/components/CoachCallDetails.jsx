@@ -47,7 +47,7 @@ export default function CoachCallDetails() {
           </h2>
 
           <p className="mt-6 text-graphite text-lg sm:text-xl leading-relaxed">
-            Every session is built to help your people —
+            Each session helps your people —
           </p>
 
           <ul className="mt-2 space-y-3 text-graphite text-lg sm:text-xl leading-relaxed list-disc list-inside">
@@ -113,8 +113,7 @@ export default function CoachCallDetails() {
           </span>
         </p>
         <p className="mt-1 text-xs sm:text-sm text-graphite italic">
-          All offerings are in pre-launch. Join the early-access list for
-          priority scheduling when slots open.
+          These services are in pre-launch—join now for early access.”
         </p>
         <hr className="mt-6 border-t border-stone-grey" />
       </div>
