@@ -69,7 +69,7 @@ export default function ContactSplit() {
           <p className="text-xs text-graphite leading-snug pt-2">
 
             <em>The Coach Call</em> — is coming soon.
-            <span className="italic"> pre-launch</span>. Join the waitlist to be first.
+            Join the waitlist to be first.
           </p>
         </div>
       </div>
