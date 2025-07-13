@@ -1,0 +1,29 @@
+{
+  "headline": {
+    "main": "Ongoing 1-on-1 Coaching",
+    "sub": "& Monthly Culture Reports"
+  },
+  "sessionIntro": "Each session helps your people —",
+  "sessionPoints": {
+    "reflect": "<strong>Reflect & Reframe</strong> challenges into opportunities",
+    "meaning": "Find <strong>Meaning & Motivation</strong> in daily work",
+    "goals": "Set <strong>Personal Goals</strong> that drive long-term engagement"
+  },
+  "keyBenefitsHeading": "Key Benefits",
+  "benefits": {
+    "time": "Reclaim up to 20 hours monthly (per 10-person team) by reducing manager overhead",
+    "blindspots": "Uncover blind spots with an external, unbiased perspective",
+    "engagement": "Boost staff engagement and improve long-term retention",
+    "culture": "Build a team culture that everyone wants to join"
+  },
+  "launchPrompt": "The Coach Call is launching soon — reserve your spot:",
+  "joinWaitList": "Join the wait-list",
+  "additionalServicesHeading": "Additional Services:",
+  "additionalServicesList": "Group workshops & team training · Leadership development · Strategic onboarding · Employer branding",
+  "additionalServicesNotice": "These services are in pre-launch—join now for early access.",
+  "modal": {
+    "title": "Join the List",
+    "emailPlaceholder": "Your email",
+    "subscribe": "Subscribe"
+  }
+}

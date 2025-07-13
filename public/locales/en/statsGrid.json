@@ -1,0 +1,28 @@
+{
+  "stats": {
+    "adminTime": {
+      "label": "Day per week managers lose to admin and stepping in for work their team could own.",
+      "suffix": " d"
+    },
+    "firefight": {
+      "label": "Manager hours lost each week firefighting culture conflicts.",
+      "suffix": " h"
+    },
+    "ping": {
+      "label": "Minutes between digital pings during the workday.",
+      "suffix": " min"
+    },
+    "disengageCost": {
+      "label": "Trillion dollars disengagement drains globally every year.",
+      "suffix": " T"
+    },
+    "burnoutQuit": {
+      "label": "Times more likely burned-out staff will quit.",
+      "suffix": "×"
+    },
+    "replaceLeader": {
+      "label": "Percent of salary it costs to replace a key leader.",
+      "suffix": " %"
+    }
+  }
+}

@@ -1,11 +1,15 @@
-/* src/components/CoachCallDetails.jsx */
 import { useState } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 
 export default function CoachCallDetails() {
-  /* -------- local state -------- */
+  const { t } = useTranslation('coachCallDetails');
   const [openSignup, setOpenSignup] = useState(false);
 
-  /* -------- shared helpers -------- */
+  const btn = (...c) =>
+    `inline-block text-center text-base font-semibold px-6 py-2 rounded-lg transition ${c.join(
+      ' '
+    )}`;
+
   const Check = (
     <svg
       className="h-5 w-5 flex-shrink-0 text-midnight-navy translate-y-[2px]"
@@ -20,64 +24,49 @@ export default function CoachCallDetails() {
     </svg>
   );
 
-  /** 🔸 Unified button helper (same as ContactSplit) */
-  const btn = (...c) =>
-    `inline-block text-center text-base font-semibold px-6 py-2 rounded-lg transition ${c.join(
-      ' '
-    )}`;
-
-  const bullets = [
-    'Reclaim up to 20 hours monthly (per 10 person team) by reducing manager overhead',
-    'Uncover blind spots with an external, unbiased perspective',
-    'Boost staff engagement and improve long-term retention',
-    'Build a team culture that everyone wants to join',
-  ];
+  /* ----- keys for bullet loops ----- */
+  const sessionKeys = ['reflect', 'meaning', 'goals'];
+  const benefitKeys = ['time', 'blindspots', 'engagement', 'culture'];
 
   return (
     <section className="bg-off-white py-20 sm:py-24">
       {/* ---------- GRID ---------- */}
       <div className="mx-auto max-w-7xl px-6 md:px-8 grid gap-12 md:gap-16 md:grid-cols-2">
+
         {/* LEFT — headline + session themes */}
         <div>
           <h2 className="font-mont font-bold text-3xl xs:text-4xl md:text-5xl leading-tight break-words">
-            Ongoing&nbsp;1-on-1&nbsp;Coaching
+            {t('headline.main')}
             <span className="block mt-3 text-copper-rust">
-              &amp; Monthly Culture Reports
+              {t('headline.sub')}
             </span>
           </h2>
 
           <p className="mt-6 text-graphite text-lg sm:text-xl leading-relaxed">
-            Each session helps your people —
+            {t('sessionIntro')}
           </p>
 
           <ul className="mt-2 space-y-3 text-graphite text-lg sm:text-xl leading-relaxed list-disc list-inside">
-            <li>
-              <strong>Reflect&nbsp;&amp;&nbsp;Reframe</strong> challenges into
-              opportunities
-            </li>
-            <li>
-              Find <strong>Meaning&nbsp;&amp;&nbsp;Motivation</strong> in daily
-              work
-            </li>
-            <li>
-              Set <strong>Personal Goals</strong> that drive long-term
-              engagement
-            </li>
+            {sessionKeys.map((k) => (
+              <li key={k}>
+                <Trans i18nKey={`sessionPoints.${k}`} t={t} components={{ strong: <strong /> }} />
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* RIGHT — benefits + CTA */}
         <div>
           <h3 className="text-midnight-navy font-semibold text-2xl mb-6">
-            Key Benefits
+            {t('keyBenefitsHeading')}
           </h3>
 
           <div className="space-y-5">
-            {bullets.map((text) => (
-              <div key={text} className="flex items-start gap-3">
+            {benefitKeys.map((k) => (
+              <div key={k} className="flex items-start gap-3">
                 {Check}
-                <p className="text-graphite text-lg sm:text-xl leading-relaxed">
-                  {text}
+                <p className="text-graphite text-lg sm:text-xl leading-relaxed break-keep">
+                  {t(`benefits.${k}`)}
                 </p>
               </div>
             ))}
@@ -85,10 +74,9 @@ export default function CoachCallDetails() {
 
           <div className="mt-10">
             <p className="text-midnight-navy text-lg sm:text-xl font-medium">
-              <em>The Coach Call is launching soon — reserve your spot:</em>
+              <em>{t('launchPrompt')}</em>
             </p>
 
-            {/* ===== CTA now opens the same modal ===== */}
             <button
               onClick={() => setOpenSignup(true)}
               className={btn(
@@ -96,7 +84,7 @@ export default function CoachCallDetails() {
                 'hover:bg-copper-rust/90'
               )}
             >
-              Join&nbsp;the&nbsp;wait-list
+              {t('joinWaitList')}
             </button>
           </div>
         </div>
@@ -105,15 +93,14 @@ export default function CoachCallDetails() {
       {/* ---------- ADDITIONAL SERVICES ---------- */}
       <div className="mx-auto max-w-7xl px-6 md:px-8 mt-14">
         <hr className="border-t border-stone-grey" />
-        <p className="mt-4 text-midnight-navy font-mont font-semibold text-base sm:text-lg leading-snug">
-          Additional&nbsp;Services:&nbsp;
+        <p className="mt-4 text-midnight-navy font-mont font-semibold text-base sm:text-lg leading-snug break-keep">
+          {t('additionalServicesHeading')}&nbsp;
           <span className="text-graphite font-normal">
-            Group workshops &amp; team training · Leadership development ·
-            Strategic onboarding · Employer branding
+            {t('additionalServicesList')}
           </span>
         </p>
-        <p className="mt-1 text-xs sm:text-sm text-graphite italic">
-          These services are in pre-launch—join now for early access.”
+        <p className="mt-1 text-xs sm:text-sm text-graphite italic break-keep">
+          {t('additionalServicesNotice')}
         </p>
         <hr className="mt-6 border-t border-stone-grey" />
       </div>
@@ -129,7 +116,7 @@ export default function CoachCallDetails() {
             onClick={(e) => e.stopPropagation()}
           >
             <h3 className="text-midnight-navy font-bold text-2xl">
-              Join the List
+              {t('modal.title')}
             </h3>
 
             <form
@@ -142,7 +129,7 @@ export default function CoachCallDetails() {
               <input
                 type="email"
                 name="EMAIL"
-                placeholder="Your email"
+                placeholder={t('modal.emailPlaceholder')}
                 required
                 className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
               />
@@ -164,10 +151,10 @@ export default function CoachCallDetails() {
                   'hover:bg-copper-rust/90'
                 )}
               >
-                Subscribe
+                {t('modal.subscribe')}
               </button>
 
-              {/* Mailchimp badge (Free plan requirement) */}
+              {/* Mailchimp badge (unchanged, vendor requirement) */}
               <p className="text-center opacity-70">
                 <a
                   href="http://eepurl.com/jhC0UY"

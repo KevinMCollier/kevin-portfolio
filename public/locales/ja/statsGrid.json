@@ -1,0 +1,28 @@
+{
+  "stats": {
+    "adminTime": {
+      "label": "管理業務や部下の肩代わりで、マネジャーが週に失う日数。",
+      "suffix": " 日"
+    },
+    "firefight": {
+      "label": "職場の対立解消に費やされるマネジャーの時間（週あたり）。",
+      "suffix": " 時間"
+    },
+    "ping": {
+      "label": "勤務時間中に通知が届く平均間隔。",
+      "suffix": " 分"
+    },
+    "disengageCost": {
+      "label": "エンゲージメント低下による世界の年間損失額。",
+      "suffix": " 兆ドル"
+    },
+    "burnoutQuit": {
+      "label": "燃え尽きた従業員が退職する確率の上昇倍率。",
+      "suffix": "倍"
+    },
+    "replaceLeader": {
+      "label": "主要リーダーを補充する際に掛かるコスト（給与比）。",
+      "suffix": " %"
+    }
+  }
+}

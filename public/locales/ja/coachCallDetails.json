@@ -1,0 +1,29 @@
+{
+  "headline": {
+    "main": "継続的な1対1コーチング",
+    "sub": "と月次カルチャーレポート"
+  },
+  "sessionIntro": "各セッションではメンバーが次を実現できます —",
+  "sessionPoints": {
+    "reflect": "<strong>振り返りとリフレーム</strong>で課題を機会に変える",
+    "meaning": "日々の仕事に<strong>意味とモチベーション</strong>を見いだす",
+    "goals": "<strong>個人目標</strong>を設定し、長期エンゲージメントを促進"
+  },
+  "keyBenefitsHeading": "主なメリット",
+  "benefits": {
+    "time": "マネジャー業務の削減により、10人チームあたり月最大20時間を取り戻す",
+    "blindspots": "外部の第三者視点で思わぬ盲点を発見",
+    "engagement": "スタッフのエンゲージメント向上と長期定着を促進",
+    "culture": "誰もが参加したくなるチームカルチャーを構築"
+  },
+  "launchPrompt": "Coach Call は近日リリース予定 — 先行登録はこちら:",
+  "joinWaitList": "ウェイトリストに登録",
+  "additionalServicesHeading": "追加サービス:",
+  "additionalServicesList": "グループワークショップ・チーム研修 · リーダーシップ開発 · 戦略的オンボーディング · 採用ブランディング",
+  "additionalServicesNotice": "これらのサービスはプレローンチ中です。今なら先行アクセス可能。",
+  "modal": {
+    "title": "登録する",
+    "emailPlaceholder": "メールアドレス",
+    "subscribe": "登録"
+  }
+}
