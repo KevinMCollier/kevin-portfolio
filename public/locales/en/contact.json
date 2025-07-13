@@ -1,0 +1,25 @@
+{
+  "heading": "Get in touch — <1>learn more</1>",
+  "cta": {
+    "join": "Join Early-Access List",
+    "call": "Book Quick Call",
+    "inquiry": "Send Inquiry"
+  },
+  "note": "<1>The Coach Call</1> — is coming soon. Join the waitlist to be first.",
+  "imageAlt": "Canyon opening toward the sky",
+
+  "modalJoin": {
+    "title": "Join the List",
+    "emailPlaceholder": "Your email",
+    "subscribe": "Subscribe"
+  },
+
+  "modalInquiry": {
+    "title": "Send an Inquiry",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "messagePlaceholder": "How can we help?",
+    "send": "Send",
+    "cancel": "Cancel"
+  }
+}

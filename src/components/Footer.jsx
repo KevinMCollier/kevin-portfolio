@@ -1,17 +1,15 @@
-// src/components/Footer.js
-
-// import { ArrowRightIcon } from "@heroicons/react/solid";
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation('footer');   // add the namespace
+
   return (
-    <header className="bg-midnight-navy md:sticky top-0 z-10">
+    <footer className="bg-midnight-navy">
       <div className="container mx-auto p-5">
-        <p
-          className="text-right border-0 py-1 px-3 focus:outline-none hover:text-sand-leather rounded text-base text-white mt-4 md:mt-0">
-          &copy; 2025 Collier Consulting · Tokyo, JP. All rights reserved.
-          {/* <ArrowRightIcon className="w-4 h-4 ml-1" /> */}
+        <p className="text-right text-base text-white hover:text-sand-leather">
+          {t('copyright')}
         </p>
       </div>
-    </header>
+    </footer>
   );
 }

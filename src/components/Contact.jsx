@@ -1,13 +1,13 @@
 /* src/components/ContactSplit.jsx */
 import { useState } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 
 export default function ContactSplit() {
+  const { t } = useTranslation('contact');
   const [openInquiry, setOpenInquiry] = useState(false);
   const [openSignup, setOpenSignup] = useState(false);
 
-  /** 🔸 Unified button helper
-      – identical size / typography / border thickness
-      – pass extra classes for color & hovers */
+  /* unified button helper */
   const btn = (...c) =>
     `block w-full text-center text-base font-semibold px-6 py-2 rounded-lg transition ${c.join(
       ' '
@@ -23,16 +23,19 @@ export default function ContactSplit() {
     <section id="contact" className="bg-off-white">
       {/* =============== MAIN FLEX ROW =============== */}
       <div className="mx-auto max-w-7xl px-6 lg:px-12 py-20 lg:py-24 flex flex-col md:flex-row md:items-start md:justify-center gap-10 md:gap-14">
+
         {/* ---------- LEFT : headline ---------- */}
-        <h2 className="flex-none max-w-md font-mont font-black text-midnight-navy text-3xl sm:text-4xl leading-tight">
-          Get&nbsp;in&nbsp;touch&nbsp;—
-          <br className="hidden sm:block" />
-          <span className="text-copper-rust"> learn more</span>
+        <h2 className="flex-none max-w-md font-mont font-black text-midnight-navy text-3xl sm:text-4xl leading-tight break-keep">
+          <Trans
+            i18nKey="heading"
+            t={t}
+            components={{ 1: <span className="text-copper-rust" /> }}
+          />
         </h2>
 
         {/* ---------- RIGHT : CTA stack ---------- */}
         <div className="flex-none w-full max-w-sm space-y-4">
-          {/* Join List (opens modal) */}
+          {/* Join List */}
           <button
             onClick={() => setOpenSignup(true)}
             className={btn(
@@ -40,10 +43,10 @@ export default function ContactSplit() {
               'hover:bg-copper-rust/90'
             )}
           >
-            Join Early-Access List
+            {t('cta.join')}
           </button>
 
-          {/* Book Call – outlined navy */}
+          {/* Book Call */}
           <button
             onClick={openCalendly}
             className={btn(
@@ -51,10 +54,10 @@ export default function ContactSplit() {
               'hover:bg-midnight-navy hover:text-off-white'
             )}
           >
-            Book Quick Call
+            {t('cta.call')}
           </button>
 
-          {/* Inquiry — outlined graphite */}
+          {/* Inquiry */}
           <button
             onClick={() => setOpenInquiry(true)}
             className={btn(
@@ -62,14 +65,16 @@ export default function ContactSplit() {
               'hover:bg-graphite hover:text-off-white'
             )}
           >
-            Send Inquiry
+            {t('cta.inquiry')}
           </button>
 
           {/* Pre-launch note */}
-          <p className="text-xs text-graphite leading-snug pt-2">
-
-            <em>The Coach Call</em> — is coming soon.
-            Join the waitlist to be first.
+          <p className="text-xs text-graphite leading-snug pt-2 break-keep">
+            <Trans
+              i18nKey="note"
+              t={t}
+              components={{ 1: <em /> }}
+            />
           </p>
         </div>
       </div>
@@ -78,7 +83,7 @@ export default function ContactSplit() {
       <div className="h-40 sm:h-56 lg:h-64 overflow-hidden">
         <img
           src="/arizona-canyon-nicolas-cool.jpg"
-          alt="Canyon opening toward the sky"
+          alt={t('imageAlt')}
           className="h-full w-full object-cover object-center"
           loading="lazy"
         />
@@ -95,7 +100,7 @@ export default function ContactSplit() {
             onClick={(e) => e.stopPropagation()}
           >
             <h3 className="text-midnight-navy font-bold text-2xl">
-              Join the List
+              {t('modalJoin.title')}
             </h3>
 
             <form
@@ -108,7 +113,7 @@ export default function ContactSplit() {
               <input
                 type="email"
                 name="EMAIL"
-                placeholder="Your email"
+                placeholder={t('modalJoin.emailPlaceholder')}
                 required
                 className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
               />
@@ -130,10 +135,10 @@ export default function ContactSplit() {
                   'hover:bg-copper-rust/90'
                 )}
               >
-                Subscribe
+                {t('modalJoin.subscribe')}
               </button>
 
-              {/* Mailchimp badge (Free plan requirement) */}
+              {/* Mailchimp badge (unchanged) */}
               <p className="text-center opacity-70">
                 <a
                   href="http://eepurl.com/jhC0UY"
@@ -172,7 +177,7 @@ export default function ContactSplit() {
             onClick={(e) => e.stopPropagation()}
           >
             <h3 className="text-midnight-navy font-bold text-2xl">
-              Send an Inquiry
+              {t('modalInquiry.title')}
             </h3>
 
             <form
@@ -194,21 +199,21 @@ export default function ContactSplit() {
               <input
                 required
                 name="name"
-                placeholder="Name"
+                placeholder={t('modalInquiry.namePlaceholder')}
                 className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
               />
               <input
                 required
                 type="email"
                 name="email"
-                placeholder="Email"
+                placeholder={t('modalInquiry.emailPlaceholder')}
                 className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
               />
               <textarea
                 required
                 name="message"
                 rows={4}
-                placeholder="How can we help?"
+                placeholder={t('modalInquiry.messagePlaceholder')}
                 className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
               />
 
@@ -220,7 +225,7 @@ export default function ContactSplit() {
                     'hover:bg-copper-rust/90'
                   )}
                 >
-                  Send
+                  {t('modalInquiry.send')}
                 </button>
                 <button
                   type="button"
@@ -230,7 +235,7 @@ export default function ContactSplit() {
                     'hover:bg-graphite hover:text-off-white'
                   )}
                 >
-                  Cancel
+                  {t('modalInquiry.cancel')}
                 </button>
               </div>
             </form>
