@@ -12,7 +12,7 @@ i18n
 
     // Tell i18next where files live:
     backend: {
-      loadPath: '/src/locales/{{lng}}/{{ns}}.json',
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
 
     // Preload the most common strings (e.g. navbar)
