@@ -23,7 +23,7 @@ export default function Approach() {
                 <h3 className="font-mont font-extrabold text-midnight-navy text-3xl sm:text-4xl">
                   {t(`steps.${k}.title`)}
                 </h3>
-                <p className="mt-2 text-graphite text-base sm:text-xl max-w-prose leading-relaxed break-keep">
+                <p className="mt-2 text-graphite text-base sm:text-xl max-w-prose leading-relaxed break-words">
                   {t(`steps.${k}.desc`)}
                 </p>
               </li>
@@ -36,7 +36,7 @@ export default function Approach() {
       {/* -------- Navy call-out -------- */}
       <section className="bg-midnight-navy py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-off-white text-2xl sm:text-3xl text-center font-medium break-keep [text-wrap:balance]">
+          <p className="text-off-white text-2xl sm:text-3xl text-center font-medium break-words [text-wrap:balance]">
             <Trans
               i18nKey="disengagementQuestion"
               t={t}

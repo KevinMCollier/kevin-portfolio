@@ -15,7 +15,7 @@ export default function Banner() {
 
           <h2
             className="mt-8 text-xl sm:text-3xl text-off-white/90 max-w-2xl
-                      leading-relaxed break-keep [text-wrap:balance]"
+                      leading-relaxed break-words [text-wrap:balance]"
           >
             {t('tagline')}
           </h2>

@@ -65,7 +65,7 @@ export default function CoachCallDetails() {
             {benefitKeys.map((k) => (
               <div key={k} className="flex items-start gap-3">
                 {Check}
-                <p className="text-graphite text-lg sm:text-xl leading-relaxed break-keep">
+                <p className="text-graphite text-lg sm:text-xl leading-relaxed break-words">
                   {t(`benefits.${k}`)}
                 </p>
               </div>
@@ -93,13 +93,13 @@ export default function CoachCallDetails() {
       {/* ---------- ADDITIONAL SERVICES ---------- */}
       <div className="mx-auto max-w-7xl px-6 md:px-8 mt-14">
         <hr className="border-t border-stone-grey" />
-        <p className="mt-4 text-midnight-navy font-mont font-semibold text-base sm:text-lg leading-snug break-keep">
+        <p className="mt-4 text-midnight-navy font-mont font-semibold text-base sm:text-lg leading-snug break-words">
           {t('additionalServicesHeading')}&nbsp;
           <span className="text-graphite font-normal">
             {t('additionalServicesList')}
           </span>
         </p>
-        <p className="mt-1 text-xs sm:text-sm text-graphite italic break-keep">
+        <p className="mt-1 text-xs sm:text-sm text-graphite italic break-words">
           {t('additionalServicesNotice')}
         </p>
         <hr className="mt-6 border-t border-stone-grey" />

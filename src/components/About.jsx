@@ -37,15 +37,15 @@ export default function About() {
             {t('heading')}
           </h1>
 
-          <p className="max-w-[55ch] text-xl leading-relaxed mb-6 break-keep">
+          <p className="max-w-[55ch] text-xl leading-relaxed mb-6 break-words">
             {t('credibility')}
           </p>
 
-          <p className="max-w-[55ch] text-xl leading-relaxed mb-6 break-keep [text-wrap:balance]">
+          <p className="max-w-[55ch] text-xl leading-relaxed mb-6 break-words [text-wrap:balance]">
             {t('story')}
           </p>
 
-          <p className="text-lg font-semibold break-keep">{t('mission')}</p>
+          <p className="text-lg font-semibold break-words">{t('mission')}</p>
         </div>
       </div>
     </section>

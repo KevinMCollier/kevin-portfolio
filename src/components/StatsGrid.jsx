@@ -42,7 +42,7 @@ export default function StatsGrid() {
               </p>
 
               {/* label & source */}
-              <p className="mt-3 text-sm sm:text-base text-graphite max-w-xs break-keep">
+              <p className="mt-3 text-sm sm:text-base text-graphite max-w-xs break-words">
                 {label}
                 <span className="ml-1 text-xs sm:text-sm text-graphite/70">
                   ({s.source})
