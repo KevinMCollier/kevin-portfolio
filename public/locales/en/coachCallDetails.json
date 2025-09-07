@@ -1,9 +1,9 @@
 {
   "headline": {
     "main": "The Coach Call",
-    "sub": "3‑month diagnostic & action sprint"
+    "sub": "Ongoing training and cultural insights feedback"
   },
-  "sessionIntro": "What you get —",
+  "sessionIntro": "Includes:",
   "sessionPoints": {
     "reflect": "Confidential staff 1:1s + manager interviews",
     "meaning": "Findings & Priorities Report with quick wins",
@@ -16,11 +16,7 @@
     "engagement": "Faster JP/Global collaboration; clearer ownership",
     "culture": "Ways‑of‑working that reduce rework and friction"
   },
-  "launchPrompt": "After Month 3: stop with a handover or move to an Ongoing Partner plan.",
   "joinWaitList": "Request a proposal",
-  "additionalServicesHeading": "Add‑ons",
-  "additionalServicesList": "Leadership coaching · Communication & Business English · Culture / ways‑of‑working workshops · Onboarding sprint",
-  "additionalServicesNotice": "Fixed‑fee modules available.",
   "modal": {
     "title": "Join the List",
     "emailPlaceholder": "Your email",

@@ -18,7 +18,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="bg-[#0a1730] border-b border-white/10 py-20">
+    <section id="services" className="bg-midnight-navy border-b border-white/10 py-20">
       <div className="container mx-auto px-5">
         {/* Heading */}
         <h2 className="font-mont font-bold text-off-white text-4xl sm:text-5xl">

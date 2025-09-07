@@ -1,20 +1,32 @@
-import { useState } from 'react';
+// src/components/CoachCallDetails.jsx
 import { Trans, useTranslation } from 'react-i18next';
 
 export default function CoachCallDetails() {
   const { t } = useTranslation('coachCallDetails');
-  const [openSignup, setOpenSignup] = useState(false);
+  const { t: tc } = useTranslation('contact');
 
   const btn = (...c) =>
-    `inline-block text-center text-base font-semibold px-6 py-2 rounded-lg transition ${c.join(
-      ' '
-    )}`;
+    `inline-block text-center text-base font-semibold px-6 py-2 rounded-lg transition ${c.join(' ')}`;
+
+  const openCalendly = () => {
+    if (window?.Calendly?.initPopupWidget) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/kevin-collier-consulting/30min',
+      });
+    } else {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const sessionKeys = ['reflect', 'meaning', 'goals'];
+  const benefitKeys = ['time', 'blindspots', 'engagement', 'culture'];
 
   const Check = (
     <svg
       className="h-5 w-5 flex-shrink-0 text-midnight-navy translate-y-[2px]"
       viewBox="0 0 24 24"
       fill="currentColor"
+      aria-hidden="true"
     >
       <path
         fillRule="evenodd"
@@ -24,39 +36,44 @@ export default function CoachCallDetails() {
     </svg>
   );
 
-  /* ----- keys for bullet loops ----- */
-  const sessionKeys = ['reflect', 'meaning', 'goals'];
-  const benefitKeys = ['time', 'blindspots', 'engagement', 'culture'];
-
   return (
-    <section className="bg-coach-blue py-20 sm:py-24">
-      {/* ---------- GRID ---------- */}
-      <div className="mx-auto max-w-7xl px-6 md:px-8 grid gap-12 md:gap-16 md:grid-cols-2">
+    <section id="coach-call" className="bg-coach-blue py-20">
+      <div className="container mx-auto px-5 grid gap-12 md:grid-cols-2">
+        {/* LEFT */}
+        <div className="max-w-[60ch]">
+          {/* Eyebrow label adds hierarchy */}
+          <p className="uppercase tracking-wide text-midnight-navy/70 font-semibold mb-2">
+            {t('label', { defaultValue: 'Recommended starting engagement' })}
+          </p>
 
-        {/* LEFT — headline + session themes */}
-        <div>
-          <h2 className="font-mont font-bold text-3xl xs:text-4xl md:text-5xl leading-tight break-words">
+          {/* Main title */}
+          <h2 className="font-mont font-black text-midnight-navy text-4xl md:text-5xl leading-tight tracking-tight">
             {t('headline.main')}
-            <span className="block mt-3 text-copper-rust">
-              {t('headline.sub')}
-            </span>
           </h2>
 
-          <p className="mt-6 text-graphite text-lg sm:text-xl leading-relaxed">
+          {/* Subheadline — smaller + lighter weight */}
+          <p className="mt-2 font-mont font-semibold text-midnight-navy text-xl sm:text-2xl md:text-3xl leading-tight">
+            {t('headline.sub')}
+          </p>
+
+          <p className="mt-6 text-midnight-navy/90 text-lg sm:text-xl leading-relaxed">
             {t('sessionIntro')}
           </p>
 
-          <ul className="mt-2 space-y-3 text-graphite text-lg sm:text-xl leading-relaxed list-disc list-inside">
+          <ul className="mt-3 space-y-3 text-midnight-navy/90 text-lg sm:text-xl leading-relaxed">
             {sessionKeys.map((k) => (
-              <li key={k}>
-                <Trans i18nKey={`sessionPoints.${k}`} t={t} components={{ strong: <strong /> }} />
+              <li key={k} className="flex gap-3">
+                <span aria-hidden className="mt-2 h-2 w-2 rounded-full bg-midnight-navy inline-block" />
+                <span>
+                  <Trans i18nKey={`sessionPoints.${k}`} t={t} components={{ strong: <strong /> }} />
+                </span>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* RIGHT — benefits + CTA */}
-        <div>
+        {/* RIGHT */}
+        <div className="md:border-l md:border-midnight-navy/15 md:pl-10">
           <h3 className="text-midnight-navy font-semibold text-2xl mb-6">
             {t('keyBenefitsHeading')}
           </h3>
@@ -65,122 +82,40 @@ export default function CoachCallDetails() {
             {benefitKeys.map((k) => (
               <div key={k} className="flex items-start gap-3">
                 {Check}
-                <p className="text-graphite text-lg sm:text-xl leading-relaxed break-words">
+                <p className="text-midnight-navy/90 text-lg sm:text-xl leading-relaxed break-words">
                   {t(`benefits.${k}`)}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-10">
-            <p className="text-midnight-navy text-lg sm:text-xl font-medium">
-              <em>{t('launchPrompt')}</em>
-            </p>
-
+          {/* CTAs */}
+          <div className="mt-10 flex flex-col sm:flex-row gap-3">
+            <a
+              href="#contact"
+              className={btn('bg-midnight-navy text-off-white', 'hover:bg-midnight-navy/90')}
+            >
+              {t('requestProposal', { defaultValue: 'Request a proposal' })}
+            </a>
             <button
-              onClick={() => setOpenSignup(true)}
+              onClick={openCalendly}
               className={btn(
-                'mt-4 bg-copper-rust text-off-white',
-                'hover:bg-copper-rust/90'
+                'border border-midnight-navy text-midnight-navy',
+                'hover:bg-midnight-navy hover:text-off-white'
               )}
             >
-              {t('joinWaitList')}
+              {tc('cta.call')}
             </button>
           </div>
+
+          <p className="mt-3 text-midnight-navy/80 text-sm">
+            {t('postMonthNote', {
+              defaultValue:
+                'After Month 3: stop with a handover or move to an Ongoing Partner plan.'
+            })}
+          </p>
         </div>
       </div>
-
-      {/* ---------- ADDITIONAL SERVICES ---------- */}
-      <div className="mx-auto max-w-7xl px-6 md:px-8 mt-14">
-        <hr className="border-t border-stone-grey" />
-        <p className="mt-4 text-midnight-navy font-mont font-semibold text-base sm:text-lg leading-snug break-words">
-          {t('additionalServicesHeading')}&nbsp;
-          <span className="text-graphite font-normal">
-            {t('additionalServicesList')}
-          </span>
-        </p>
-        <p className="mt-1 text-xs sm:text-sm text-graphite italic break-words">
-          {t('additionalServicesNotice')}
-        </p>
-        <hr className="mt-6 border-t border-stone-grey" />
-      </div>
-
-      {/* =============== MODAL: JOIN LIST =============== */}
-      {openSignup && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
-          onClick={() => setOpenSignup(false)}
-        >
-          <div
-            className="bg-off-white w-full max-w-md rounded-xl p-8 space-y-6 relative"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h3 className="text-midnight-navy font-bold text-2xl">
-              {t('modal.title')}
-            </h3>
-
-            <form
-              action="https://kevin-collier.us8.list-manage.com/subscribe/post?u=3223839310f18f06bdb1456c2&id=7987856aee&f_id=004972e1f0"
-              method="post"
-              target="_blank"
-              noValidate
-              className="space-y-4"
-            >
-              <input
-                type="email"
-                name="EMAIL"
-                placeholder={t('modal.emailPlaceholder')}
-                required
-                className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
-              />
-
-              {/* Honeypot */}
-              <div className="absolute -left-[5000px]" aria-hidden="true">
-                <input
-                  type="text"
-                  name="b_3223839310f18f06bdb1456c2_7987856aee"
-                  tabIndex="-1"
-                  defaultValue=""
-                />
-              </div>
-
-              <button
-                type="submit"
-                className={btn(
-                  'bg-copper-rust text-off-white',
-                  'hover:bg-copper-rust/90'
-                )}
-              >
-                {t('modal.subscribe')}
-              </button>
-
-              {/* Mailchimp badge (unchanged, vendor requirement) */}
-              <p className="text-center opacity-70">
-                <a
-                  href="http://eepurl.com/jhC0UY"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Mailchimp – email marketing made easy and fun"
-                >
-                  <img
-                    src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
-                    alt="Intuit Mailchimp"
-                    className="h-6 mx-auto"
-                  />
-                </a>
-              </p>
-            </form>
-
-            <button
-              onClick={() => setOpenSignup(false)}
-              aria-label="Close modal"
-              className="absolute top-4 right-4 text-graphite hover:text-midnight-navy"
-            >
-              ✕
-            </button>
-          </div>
-        </div>
-      )}
     </section>
   );
 }
