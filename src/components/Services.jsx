@@ -3,19 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 export default function Services() {
   const { t } = useTranslation('services');   // uses services.json
-  const { t: tc } = useTranslation('contact'); // reuses CTA labels
 
   const items = t('items', { returnObjects: true }) || [];
-
-  const openCalendly = () => {
-    if (window?.Calendly?.initPopupWidget) {
-      window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/kevin-collier-consulting/30min',
-      });
-    } else {
-      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section id="services" className="bg-midnight-navy border-b border-white/10 py-20">
@@ -24,9 +13,6 @@ export default function Services() {
         <h2 className="font-mont font-bold text-off-white text-4xl sm:text-5xl">
           {t('heading')}
         </h2>
-        <p className="mt-3 max-w-2xl text-lg text-off-white/80">
-          {t('intro')}
-        </p>
 
         {/* Cards */}
         <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -42,22 +28,8 @@ export default function Services() {
         </div>
 
         {/* Note + CTAs */}
-        <p className="mt-6 text-sm text-off-white/70">{t('deliveryNote')}</p>
+        <p className="mt-6 max-w-2xl text-lg text-off-white/80">{t('deliveryNote')}</p>
 
-        <div className="mt-8 flex flex-col sm:flex-row gap-3">
-          <button
-            onClick={openCalendly}
-            className="inline-flex items-center justify-center rounded-lg bg-copper-rust px-6 py-2 text-base font-semibold text-off-white transition hover:bg-copper-rust/90"
-          >
-            {tc('cta.call')}
-          </button>
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center rounded-lg border border-white/20 px-6 py-2 text-base font-semibold text-off-white transition hover:bg-white/10"
-          >
-            {tc('cta.inquiry')}
-          </a>
-        </div>
       </div>
     </section>
   );
