@@ -1,10 +1,11 @@
 /* src/components/Banner.jsx */
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Globe2, Bolt, BarChart3 } from 'lucide-react'; // icons for the Value Bar
 
 export default function Banner() {
-  const { t } = useTranslation('banner');   // uses banner.tagline
-  const { t: tc } = useTranslation('contact'); // reuse CTA + modal labels
+  const { t } = useTranslation('banner');       // uses banner.tagline + (new) banner.value.*
+  const { t: tc } = useTranslation('contact');  // reuse CTA + modal labels
 
   const [openInquiry, setOpenInquiry] = useState(false);
   const [openSignup, setOpenSignup] = useState(false);
@@ -25,52 +26,62 @@ export default function Banner() {
     }
   };
 
+  // ===== VALUE BAR DATA (i18n-friendly with sensible defaults) =====
+  const valueItems = [
+    {
+      icon: Globe2,
+      label: t('value.jpGlobal', { defaultValue: 'Japan–Global, bilingual (EN/JP)' }),
+    },
+    {
+      icon: Bolt,
+      label: t('value.actionSprints', { defaultValue: 'Action sprints that create habits' }),
+    },
+    {
+      icon: BarChart3,
+      label: t('value.measurable', { defaultValue: 'Measurable improvements in 30–90 days' }),
+    },
+  ];
+
   return (
     <section id="banner" className="bg-midnight-navy h-screen pt-28 md:pt-0">
       <div className="container mx-auto flex px-10 lg:py-20 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start text-center md:text-left mb-10 md:mb-0">
 
-          {/* === HEADLINE (unchanged) === */}
+          {/* === HEADLINE === */}
           <h1 className="font-mont font-bold text-off-white text-6xl sm:text-8xl tracking-tight">
             <span className="text-sea-mist">Growth</span> begins with your&nbsp;
             <span className="text-copper-rust">people</span>
           </h1>
 
+          {/* === TAGLINE === */}
           <h2 className="mt-6 max-w-3xl text-xl text-off-white/90">
             {t('tagline', { defaultValue: t('sub', { defaultValue: '' }) })}
           </h2>
 
-          {/* === HERO BULLETS === */}
-          <ul className="mt-5 space-y-2 max-w-2xl text-off-white/90 text-base">
-            {(t('bullets', { returnObjects: true }) || []).map((line, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <span aria-hidden className="mt-2 h-2 w-2 rounded-full bg-copper-rust inline-block" />
-                <span>{line}</span>
-              </li>
+          {/* === VALUE BAR (inline) === */}
+          <div className="mt-4 max-w-3xl text-off-white/80 text-sm">
+            {valueItems.map(({ label }, i) => (
+              <span key={label} className="inline">
+                {label}
+                {i < valueItems.length - 1 && (
+                  <span className="mx-2 align-middle inline-block h-1 w-1 rounded-full bg-off-white/40" />
+                )}
+              </span>
             ))}
-          </ul>
+          </div>
 
-          {/* === CTAs (added; same look/feel as ContactSplit) === */}
+
+          {/* === CTAs === */}
           <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            {/* Join List
-            <button
-              onClick={() => setOpenSignup(true)}
-              className={btn('bg-copper-rust text-off-white', 'hover:bg-copper-rust/90')}
-            >
-              {tc('cta.join')}
-            </button> */}
-
-            {/* Book Call */}
+            {/* Book Call (primary) */}
             <button
               onClick={openCalendly}
-              className={btn(
-                'bg-copper-rust text-off-white', 'hover:bg-copper-rust/90'
-              )}
+              className={btn('bg-copper-rust text-off-white', 'hover:bg-copper-rust/90')}
             >
               {tc('cta.call')}
             </button>
 
-            {/* Inquiry */}
+            {/* Inquiry (secondary) */}
             <button
               onClick={() => setOpenInquiry(true)}
               className={btn(
@@ -158,7 +169,7 @@ export default function Banner() {
         </div>
       )}
 
-      {/* ===== INQUIRY MODAL (unique form name to avoid collision) ===== */}
+      {/* ===== INQUIRY MODAL ===== */}
       {openInquiry && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
