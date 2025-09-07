@@ -3,9 +3,11 @@ import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Footer from "./components/Footer";
-import CoachCall from "./components/CoachCall";
+import Services from "./components/Services"
+import Audience from "./components/Audience"
+// import CoachCall from "./components/CoachCall";
 import CoachCallDetails from "./components/CoachCallDetails";
-import Approach from "./components/Approach";
+import Process from "./components/Process";
 // import StatsGrid from "./components/StatsGrid";
 
 function App() {
@@ -15,9 +17,11 @@ function App() {
       <div className="App text-gray-800 bg-gray-200 body-font">
         <Navbar />
         <Banner />
-        <Approach />
+        <Services />
+        <Audience />
+        <Process />
         {/* <StatsGrid /> */}
-        <CoachCall />
+        {/* <CoachCall /> */}
         <CoachCallDetails />
         <About />
         <Contact />

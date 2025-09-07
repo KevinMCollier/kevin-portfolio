@@ -29,7 +29,7 @@ export default function CoachCallDetails() {
   const benefitKeys = ['time', 'blindspots', 'engagement', 'culture'];
 
   return (
-    <section className="bg-off-white py-20 sm:py-24">
+    <section className="bg-coach-blue py-20 sm:py-24">
       {/* ---------- GRID ---------- */}
       <div className="mx-auto max-w-7xl px-6 md:px-8 grid gap-12 md:gap-16 md:grid-cols-2">
 

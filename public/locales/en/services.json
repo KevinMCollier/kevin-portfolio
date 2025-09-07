@@ -1,0 +1,35 @@
+{
+  "heading": "Core Services",
+  "intro": "Pick the problem—I'll recommend the best delivery (1:1 coaching, workshop, or a short consulting project).",
+  "items": [
+    {
+      "title": "Feedback & Insights",
+      "desc": "Employee pulse interviews, surveys, and culture checks to identify challenges and opportunities."
+    },
+    {
+      "title": "Leadership Development",
+      "desc": "New-manager training, senior leadership coaching, succession support."
+    },
+    {
+      "title": "Early Career Support",
+      "desc": "Onboarding programs, new-grad training, and career coaching."
+    },
+    {
+      "title": "Communication Skills",
+      "desc": "Cross-cultural teamwork, conflict resolution, and public speaking."
+    },
+    {
+      "title": "International Culture",
+      "desc": "Understand global workplace norms; build confidence in international settings."
+    },
+    {
+      "title": "Global Business English",
+      "desc": "Practical coaching for presentations, meetings, and working abroad."
+    },
+    {
+      "title": "HR Process Consulting",
+      "desc": "Recruitment strategy, onboarding design, retention & engagement."
+    }
+  ],
+  "deliveryNote": "Delivery: 1:1 coaching, workshops, or short consulting projects—recommended to fit your needs."
+}
