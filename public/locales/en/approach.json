@@ -2,15 +2,15 @@
   "heading": "Our Process",
   "steps": {
     "listen": {
-      "title": "Listen",
+      "title": "1. Listen",
       "desc": "Understand your current situation, struggles, and goals."
     },
     "patterns": {
-      "title": "Identify",
+      "title": "2. Identify",
       "desc": "Surface patterns in communication, leadership, and culture."
     },
     "act": {
-      "title": "Act",
+      "title": "3. Act",
       "desc": "Deliver a focused plan with coaching, workshops, or process fixes—then measure results."
     }
   },
