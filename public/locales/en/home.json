@@ -1,0 +1,75 @@
+{
+  "proof": {
+    "tiles": [
+      {
+        "title": "MBA",
+        "subtitle": "University of Arizona"
+      },
+      {
+        "title": "11 yrs",
+        "subtitle": "Leadership & HR"
+      },
+      {
+        "title": "400+",
+        "subtitle": "Hires / Onboards"
+      },
+      {
+        "title": "JP ⇄ Global",
+        "subtitle": "Bilingual teams"
+      }
+    ]
+  },
+  "value": {
+    "heading": "Growth begins with how your people work",
+    "body": "When teams communicate clearly and managers lead well, work moves faster, morale rises, and turnover drops. I make that happen—without the buzzwords.",
+    "bullets": [
+      {
+        "title": "Fix people problems",
+        "body": "Communication, leadership, and ways‑of‑working issues diagnosed and solved."
+      },
+      {
+        "title": "Fast, practical change",
+        "body": "Workshops and coaching that create habits, not just slides."
+      },
+      {
+        "title": "Made for Japan–Global teams",
+        "body": "Bilingual materials; culturally fluent facilitation."
+      }
+    ]
+  },
+  "packages": {
+    "heading": "Packages",
+    "project": {
+      "title": "Project — The Coach Call",
+      "desc": "3 months · findings report · one Action Sprint · leadership readout · 90‑day plan",
+      "cta": "Get a quote"
+    },
+    "retainer": {
+      "title": "Retainer — Ongoing Partner",
+      "desc": "Monthly pulse 1:1s · quarterly reviews · bundled coaching/training hours · priority support",
+      "cta": "See availability"
+    }
+  },
+  "results": {
+    "heading": "Results we target in 90 days",
+    "metrics": [
+      {
+        "kpi": "↓ Attrition risk",
+        "note": "Fewer surprise resignations"
+      },
+      {
+        "kpi": "10–20h saved",
+        "note": "per month / 10‑person team"
+      },
+      {
+        "kpi": "Shorter meetings",
+        "note": "Clear agendas & decisions"
+      },
+      {
+        "kpi": "Less rework",
+        "note": "Cleaner handoffs & ownership"
+      }
+    ],
+    "cta": "View sample report"
+  }
+}

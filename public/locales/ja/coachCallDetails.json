@@ -1,29 +1,24 @@
 {
   "headline": {
-    "main": "継続的な1対1コーチング",
-    "sub": "と月次カルチャーレポート"
+    "main": "The Coach Call",
+    "sub": "3か月の診断＆アクション・スプリント"
   },
-  "sessionIntro": "各セッションではメンバーが次を実現できます —",
+  "sessionIntro": "提供内容 —",
   "sessionPoints": {
-    "reflect": "<strong>振り返りとリフレーム</strong>で課題を機会に変える",
-    "meaning": "日々の仕事に<strong>意味とモチベーション</strong>を見いだす",
-    "goals": "<strong>個人目標</strong>を設定し、長期エンゲージメントを促進"
+    "reflect": "従業員1対1ヒアリング＋マネジャーインタビュー（守秘）",
+    "meaning": "所見＆優先課題レポート（クイックウィン含む）",
+    "goals": "重点アクション・スプリントを1本＋30/60/90フォロー計画"
   },
-  "keyBenefitsHeading": "主なメリット",
+  "keyBenefitsHeading": "想定される成果",
   "benefits": {
-    "time": "マネジャー業務の削減により、10人チームあたり月最大20時間を取り戻す",
-    "blindspots": "外部の第三者視点で思わぬ盲点を発見",
-    "engagement": "スタッフのエンゲージメント向上と長期定着を促進",
-    "culture": "誰もが参加したくなるチームカルチャーを構築"
+    "time": "退職・エスカレーションの不意打ちを減らす",
+    "blindspots": "マネジャーの1on1・会議の質が上がる",
+    "engagement": "日英グローバル協働がスムーズに／役割と責任の明確化",
+    "culture": "やり方（Ways of Working）が定まり、手戻りや摩擦が減る"
   },
-  "launchPrompt": "Coach Call は近日リリース予定 — 先行登録はこちら:",
-  "joinWaitList": "ウェイトリストに登録",
-  "additionalServicesHeading": "追加サービス:",
-  "additionalServicesList": "グループワークショップ・チーム研修 · リーダーシップ開発 · 戦略的オンボーディング · 採用ブランディング",
-  "additionalServicesNotice": "これらのサービスはプレローンチ中です。今なら先行アクセス可能。",
-  "modal": {
-    "title": "登録する",
-    "emailPlaceholder": "メールアドレス",
-    "subscribe": "登録"
-  }
+  "launchPrompt": "3か月終了後：引き継ぎで完了、または「継続パートナー」へ。",
+  "joinWaitList": "提案依頼",
+  "additionalServicesHeading": "追加モジュール",
+  "additionalServicesList": "リーダーシップコーチング／コミュニケーション＆ビジネス英語／カルチャー・働き方のワークショップ／オンボーディング・スプリント",
+  "additionalServicesNotice": "定額のパッケージをご用意しています。"
 }

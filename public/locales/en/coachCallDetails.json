@@ -1,26 +1,26 @@
 {
   "headline": {
-    "main": "Ongoing 1-on-1 Coaching",
-    "sub": "& Monthly Culture Reports"
+    "main": "The Coach Call",
+    "sub": "3‑month diagnostic & action sprint"
   },
-  "sessionIntro": "Each session helps your people —",
+  "sessionIntro": "What you get —",
   "sessionPoints": {
-    "reflect": "<strong>Reflect & Reframe</strong> challenges into opportunities",
-    "meaning": "Find <strong>Meaning & Motivation</strong> in daily work",
-    "goals": "Set <strong>Personal Goals</strong> that drive long-term engagement"
+    "reflect": "Confidential staff 1:1s + manager interviews",
+    "meaning": "Findings & Priorities Report with quick wins",
+    "goals": "One targeted Action Sprint + 30/60/90 follow‑through"
   },
-  "keyBenefitsHeading": "Key Benefits",
+  "keyBenefitsHeading": "Typical outcomes",
   "benefits": {
-    "time": "Reclaim up to 20 hours monthly (per 10-person team) by reducing manager overhead",
-    "blindspots": "Uncover blind spots with an external, unbiased perspective",
-    "engagement": "Boost staff engagement and improve long-term retention",
-    "culture": "Build a team culture that everyone wants to join"
+    "time": "Fewer surprise resignations and escalations",
+    "blindspots": "Managers run better 1:1s & meetings",
+    "engagement": "Faster JP/Global collaboration; clearer ownership",
+    "culture": "Ways‑of‑working that reduce rework and friction"
   },
-  "launchPrompt": "The Coach Call is launching soon — reserve your spot:",
-  "joinWaitList": "Join the wait-list",
-  "additionalServicesHeading": "Additional Services:",
-  "additionalServicesList": "Group workshops & team training · Leadership development · Strategic onboarding · Employer branding",
-  "additionalServicesNotice": "These services are in pre-launch—join now for early access.",
+  "launchPrompt": "After Month 3: stop with a handover or move to an Ongoing Partner plan.",
+  "joinWaitList": "Request a proposal",
+  "additionalServicesHeading": "Add‑ons",
+  "additionalServicesList": "Leadership coaching · Communication & Business English · Culture / ways‑of‑working workshops · Onboarding sprint",
+  "additionalServicesNotice": "Fixed‑fee modules available.",
   "modal": {
     "title": "Join the List",
     "emailPlaceholder": "Your email",

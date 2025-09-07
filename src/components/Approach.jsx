@@ -1,4 +1,4 @@
-import { Trans, useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 export default function Approach() {
   const { t } = useTranslation('approach');
@@ -34,7 +34,7 @@ export default function Approach() {
       </section>
 
       {/* -------- Navy call-out -------- */}
-      <section className="bg-midnight-navy py-20">
+      {/* <section className="bg-midnight-navy py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <p className="text-off-white text-2xl sm:text-3xl text-center font-medium break-words [text-wrap:balance]">
             <Trans
@@ -44,7 +44,7 @@ export default function Approach() {
             />
           </p>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
