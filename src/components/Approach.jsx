@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 export default function Approach() {
   const { t } = useTranslation('approach');
 
-  const stepKeys = ['listen', 'patterns', 'align', 'thrive'];
+  const stepKeys = ['listen', 'patterns', 'act'];
 
   return (
     <>
