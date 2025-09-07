@@ -7,7 +7,6 @@ import CoachCall from "./components/CoachCall";
 import CoachCallDetails from "./components/CoachCallDetails";
 import Approach from "./components/Approach";
 // import StatsGrid from "./components/StatsGrid";
-import ValueStrip from "./components/ValueStrip";
 
 function App() {
 
@@ -16,7 +15,6 @@ function App() {
       <div className="App text-gray-800 bg-gray-200 body-font">
         <Navbar />
         <Banner />
-        <ValueStrip />
         <Approach />
         {/* <StatsGrid /> */}
         <CoachCall />

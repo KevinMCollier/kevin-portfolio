@@ -31,15 +31,24 @@ export default function Banner() {
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start text-center md:text-left mb-10 md:mb-0">
 
           {/* === HEADLINE (unchanged) === */}
-          <h1 className="font-mont font-bold text-off-white text-5xl sm:text-7xl tracking-tight">
+          <h1 className="font-mont font-bold text-off-white text-6xl sm:text-8xl tracking-tight">
             <span className="text-sea-mist">Growth</span> begins with your&nbsp;
             <span className="text-copper-rust">people</span>
           </h1>
 
-          <h2 className="mt-6 max-w-2xl text-lg text-off-white/90">
+          <h2 className="mt-6 max-w-3xl text-xl text-off-white/90">
             {t('tagline', { defaultValue: t('sub', { defaultValue: '' }) })}
           </h2>
 
+          {/* === HERO BULLETS === */}
+          <ul className="mt-5 space-y-2 max-w-2xl text-off-white/90 text-base">
+            {(t('bullets', { returnObjects: true }) || []).map((line, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span aria-hidden className="mt-2 h-2 w-2 rounded-full bg-copper-rust inline-block" />
+                <span>{line}</span>
+              </li>
+            ))}
+          </ul>
 
           {/* === CTAs (added; same look/feel as ContactSplit) === */}
           <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -56,8 +65,6 @@ export default function Banner() {
               onClick={openCalendly}
               className={btn(
                 'bg-copper-rust text-off-white', 'hover:bg-copper-rust/90'
-                // 'border border-off-white text-off-white',
-                // 'hover:bg-off-white hover:text-midnight-navy'
               )}
             >
               {tc('cta.call')}
@@ -69,8 +76,6 @@ export default function Banner() {
               className={btn(
                 'border border-off-white text-off-white',
                 'hover:bg-off-white hover:text-midnight-navy'
-                // 'border border-graphite text-off-white',
-                // 'hover:bg-graphite hover:text-off-white'
               )}
             >
               {tc('cta.inquiry')}
