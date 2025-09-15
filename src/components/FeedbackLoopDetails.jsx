@@ -84,8 +84,8 @@ export default function FeedbackLoopDetails() {
             <button
               onClick={() => setOpenSignup(true)}
               className={btn(
-                'bg-copper-rust text-off-white',
-                'hover:bg-copper-rust/90'
+                'border bg-midnight-navy text-off-white',
+                'hover:bg-midnight-navy/80'
               )}
             >
               {tc('cta.join')}

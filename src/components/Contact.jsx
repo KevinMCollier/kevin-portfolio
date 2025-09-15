@@ -35,27 +35,27 @@ export default function ContactSplit() {
 
         {/* ---------- RIGHT : CTA stack ---------- */}
         <div className="flex-none w-full max-w-sm space-y-4">
-          {/* Join List */}
+          {/* Book Call */}
           <button
-            onClick={() => setOpenSignup(true)}
+            onClick={openCalendly}
             className={btn(
               'bg-copper-rust text-off-white',
               'hover:bg-copper-rust/90'
             )}
           >
+            {t('cta.call')}
+          </button>
+          {/* Join List */}
+          <button
+            onClick={() => setOpenSignup(true)}
+            className={btn(
+              'border bg-midnight-navy text-off-white',
+              'hover:bg-midnight-navy/80'
+            )}
+          >
             {t('cta.join')}
           </button>
 
-          {/* Book Call */}
-          <button
-            onClick={openCalendly}
-            className={btn(
-              'border border-midnight-navy text-midnight-navy',
-              'hover:bg-midnight-navy hover:text-off-white'
-            )}
-          >
-            {t('cta.call')}
-          </button>
 
           {/* Inquiry */}
           <button
