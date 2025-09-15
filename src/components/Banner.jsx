@@ -69,7 +69,9 @@ export default function Banner() {
             href="#FeedbackLoop"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById('feedback-loop')?.scrollIntoView({ behavior: 'smooth' });
+              document.getElementById('FeedbackLoop')?.scrollIntoView({
+                behavior: 'smooth', block: 'start'
+              });
             }}
             className="underline underline-offset-4 hover:text-off-white"
           >
