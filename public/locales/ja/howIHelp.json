@@ -1,22 +1,22 @@
 {
-  "heading": "How I Help",
+  "heading": "私の提供する支援",
   "items": {
     "workshops": {
-      "title": "Group Workshops",
-      "desc": "Interactive training sessions on leadership, cross-cultural communication, and team cohesion. Build confidence in business English, prepare staff for global roles, and strengthen collaboration across departments."
+      "title": "グループ研修",
+      "desc": "リーダーシップ、異文化コミュニケーション、チームの一体感をテーマにした参加型セッション。ビジネス英語の自信を高め、グローバル対応力を養い、部門間の協働を強化します。"
     },
     "training": {
-      "title": "Ongoing Training Programs",
-      "desc": "Structured development journeys for managers and teams. Improve delegation, motivate staff, and develop early-career employees as they discover their professional path."
+      "title": "継続的なトレーニングプログラム",
+      "desc": "マネージャーやチームの成長を支える体系的な育成プログラム。委任力を高め、モチベーションを引き出し、若手社員のキャリア形成を支援します。"
     },
     "process": {
-      "title": "HR Process Improvement",
-      "desc": "Optimize onboarding, feedback systems, and manager 1:1s. Reduce ramp-up time, increase retention, and create ways-of-working that align Japan and global expectations."
+      "title": "人事プロセス改善",
+      "desc": "オンボーディング、フィードバック体制、1対1ミーティングを最適化。立ち上がり期間を短縮し、定着率を向上させ、日系とグローバルの期待を調和させた働き方を構築します。"
     },
     "coaching": {
-      "title": "1:1 Coaching & Feedback",
-      "desc": "Confidential sessions for individuals. Surface hidden issues, support career growth, and provide a safe space to develop clarity and motivation."
+      "title": "1対1コーチング＆フィードバック",
+      "desc": "個人向けの機密セッション。隠れた課題を引き出し、キャリア成長を支援し、明確さとモチベーションを高める安全な場を提供します。"
     }
   },
-  "ctaLine": "Book a meeting and we can discuss the right solutions for your team."
+  "ctaLine": "御社に最適なソリューションについて一緒に話しませんか？"
 }

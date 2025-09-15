@@ -1,28 +1,28 @@
 {
-  "label": "Featured Service",
+  "label": "注目のサービス",
   "headline": {
     "main": "The Feedback Loop",
-    "sub": "A continuous cycle of listening, insight, and action that strengthens your people and culture."
+    "sub": "「傾聴・洞察・行動」を継続的に循環させ、人と組織文化を強化する仕組みです。"
   },
-  "sessionIntro": "How it works:",
+  "sessionIntro": "進め方:",
   "sessionPoints": {
-    "listen": "Confidential staff 1:1s and manager interviews give employees a safe space to be heard.",
-    "surface": "Findings & Priorities Report highlights hidden issues and quick wins.",
-    "act": "One targeted Action Sprint tackles the most urgent challenge.",
-    "sustain": "30/60/90 follow-through and ongoing check-ins keep progress from fading."
+    "listen": "機密性を保った1対1面談や匿名アンケートで、従業員が安心して声を届けられる場を提供します。",
+    "surface": "毎月のカルチャーレポートで、隠れた課題や改善ポイントを明らかにします。",
+    "act": "アクション・スプリントで最も緊急の課題に取り組みます。",
+    "sustain": "定期的なフォローアップで進捗を定着させ、形骸化を防ぎます。"
   },
-  "keyBenefitsHeading": "What teams typically gain:",
+  "keyBenefitsHeading": "導入効果:",
   "benefits": {
-    "retention": "Long-term impact: fewer surprise resignations and escalations",
-    "leadership": "Managers save hours each week by running more effective 1:1s and meetings",
-    "collaboration": "Faster JP/Global collaboration with clearer ownership and alignment",
-    "culture": "A stronger workplace culture that people are proud of — and want to be part of"
+    "retention": "長期的な効果：突然の退職やエスカレーションが減少",
+    "leadership": "マネージャーは1対1や会議をより効果的に運営し、週に数時間を節約",
+    "collaboration": "役割分担と整合性が明確になり、日系／グローバル間の協働が加速",
+    "culture": "従業員が誇りを持ち、参加したいと思える職場文化を強化"
   },
-  "cta": "Request a proposal",
-  "postMonthNote": "Available in 3-month, 6-month, and 12-month plans.",
+  "cta": "提案を依頼する",
+  "postMonthNote": "3か月・6か月・12か月のプランから選べます。",
   "modal": {
-    "title": "Request a Proposal",
-    "emailPlaceholder": "Your email",
-    "subscribe": "Send"
+    "title": "提案を依頼する",
+    "emailPlaceholder": "メールアドレス",
+    "subscribe": "送信"
   }
 }

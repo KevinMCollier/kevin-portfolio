@@ -3,19 +3,19 @@
   "items": {
     "workshops": {
       "title": "Group Workshops",
-      "desc": "Interactive training sessions on leadership, cross-cultural communication, and team cohesion. Build confidence in business English, prepare staff for global roles, and strengthen collaboration across departments."
+      "desc": "Run <strong>interactive workshops</strong> that sharpen leadership skills, strengthen cross-cultural communication, and build team cohesion. Help staff gain confidence in business English, prepare for global roles, and collaborate smoothly across departments."
     },
     "training": {
       "title": "Ongoing Training Programs",
-      "desc": "Structured development journeys for managers and teams. Improve delegation, motivate staff, and develop early-career employees as they discover their professional path."
+      "desc": "Guide managers and teams through <strong>structured development journeys</strong>. Push leaders to delegate effectively, keep staff motivated, and shape early-career employees as they grow into their professional path."
     },
     "process": {
       "title": "HR Process Improvement",
-      "desc": "Optimize onboarding, feedback systems, and manager 1:1s. Reduce ramp-up time, increase retention, and create ways-of-working that align Japan and global expectations."
+      "desc": "Redesign and <strong>optimize onboarding, feedback systems, employer branding, and manager 1:1s</strong>. Cut ramp-up time, boost retention, and align ways-of-working across Japan and global offices."
     },
     "coaching": {
       "title": "1:1 Coaching & Feedback",
-      "desc": "Confidential sessions for individuals. Surface hidden issues, support career growth, and provide a safe space to develop clarity and motivation."
+      "desc": "Offer <strong>confidential coaching sessions</strong> where individuals surface hidden issues, clarify their goals, and build motivation. Create a safe space for career growth and clear next steps."
     }
   },
   "ctaLine": "Let's discuss the right solutions for your team"
