@@ -18,7 +18,7 @@ export default function StatsGrid() {
     <section className="bg-midnight-navy pb-28 lg:pb-32">
             <div className="container mx-auto px-5 py-20">
         <h2 className="font-mont font-bold text-4xl sm:text-5xl text-sea-mist">
-          Why these challenges matter...
+          People Problems are Business Problems
         </h2>
         </div>
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-14">

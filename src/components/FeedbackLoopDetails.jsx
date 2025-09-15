@@ -1,23 +1,17 @@
+// src/components/FeedbackLoopDetails.jsx
+import { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 
 export default function FeedbackLoopDetails() {
   const { t } = useTranslation('feedbackLoopDetails');
   const { t: tc } = useTranslation('contact');
 
+  const [openSignup, setOpenSignup] = useState(false); // NEW
+
   const btn = (...c) =>
     `inline-block text-center text-base font-semibold px-6 py-2 rounded-lg transition ${c.join(' ')}`;
 
   const body = 'text-black text-base sm:text-lg leading-relaxed';
-
-  const openCalendly = () => {
-    if (window?.Calendly?.initPopupWidget) {
-      window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/kevin-collier-consulting/30min',
-      });
-    } else {
-      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const sessionKeys = ['listen', 'surface', 'act', 'sustain'];
   const benefitKeys = ['retention', 'leadership', 'collaboration', 'culture'];
@@ -54,9 +48,7 @@ export default function FeedbackLoopDetails() {
             {t('headline.sub')}
           </p>
 
-
-
-          {/* How it works — now matches text-base sm:text-lg */}
+          {/* How it works */}
           <ul className={`mt-7 space-y-3 ${body}`}>
             {sessionKeys.map((k) => (
               <li key={k} className="flex gap-3">
@@ -75,7 +67,7 @@ export default function FeedbackLoopDetails() {
             {t('keyBenefitsHeading')}
           </h3>
 
-          {/* Benefits — now matches text-base sm:text-lg */}
+          {/* Benefits */}
           <div className="space-y-5">
             {benefitKeys.map((k) => (
               <div key={k} className="flex items-start gap-3">
@@ -87,22 +79,16 @@ export default function FeedbackLoopDetails() {
             ))}
           </div>
 
-          {/* CTAs */}
+          {/* CTAs — replaced Calendly with Join List */}
           <div className="mt-10 flex flex-col sm:flex-row gap-3">
-            <a
-              href="#contact"
-              className={btn('bg-midnight-navy text-off-white', 'hover:bg-midnight-navy/90')}
-            >
-              {t('cta', { defaultValue: 'Request a proposal' })}
-            </a>
             <button
-              onClick={openCalendly}
+              onClick={() => setOpenSignup(true)}
               className={btn(
-                'border border-copper-rust text-copper-rust',
-                'hover:bg-copper-rust hover:text-off-white'
+                'bg-copper-rust text-off-white',
+                'hover:bg-copper-rust/90'
               )}
             >
-              {tc('cta.call')}
+              {tc('cta.join')}
             </button>
           </div>
 
@@ -114,6 +100,83 @@ export default function FeedbackLoopDetails() {
           </p>
         </div>
       </div>
+
+      {/* =============== MODAL: JOIN LIST (duplicated from ContactSplit) =============== */}
+      {openSignup && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
+          onClick={() => setOpenSignup(false)}
+        >
+          <div
+            className="bg-off-white w-full max-w-md rounded-xl p-8 space-y-6 relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="text-midnight-navy font-bold text-2xl">
+              {tc('modalJoin.title')}
+            </h3>
+
+            <form
+              action="https://kevin-collier.us8.list-manage.com/subscribe/post?u=3223839310f18f06bdb1456c2&id=7987856aee&f_id=004972e1f0"
+              method="post"
+              target="_blank"
+              noValidate
+              className="space-y-4"
+            >
+              <input
+                type="email"
+                name="EMAIL"
+                placeholder={tc('modalJoin.emailPlaceholder')}
+                required
+                className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
+              />
+
+              {/* Honeypot */}
+              <div className="absolute -left-[5000px]" aria-hidden="true">
+                <input
+                  type="text"
+                  name="b_3223839310f18f06bdb1456c2_7987856aee"
+                  tabIndex="-1"
+                  defaultValue=""
+                />
+              </div>
+
+              <button
+                type="submit"
+                className={btn(
+                  'bg-copper-rust text-off-white',
+                  'hover:bg-copper-rust/90'
+                )}
+              >
+                {tc('modalJoin.subscribe')}
+              </button>
+
+              {/* Mailchimp badge (unchanged) */}
+              <p className="text-center opacity-70">
+                <a
+                  href="http://eepurl.com/jhC0UY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Mailchimp – email marketing made easy and fun"
+                >
+                  <img
+                    src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
+                    alt="Intuit Mailchimp"
+                    className="h-6 mx-auto"
+                  />
+                </a>
+              </p>
+            </form>
+
+            <button
+              onClick={() => setOpenSignup(false)}
+              aria-label="Close modal"
+              className="absolute top-4 right-4 text-graphite hover:text-midnight-navy"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
