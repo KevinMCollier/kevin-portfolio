@@ -9,7 +9,7 @@ export default function FeedbackLoop() {
           flex flex-col md:flex-row
           justify-center items-center
           px-6 lg:px-12
-          py-10 md:py-12 lg:py-14
+          py-15 md:py-14 lg:py-16
           gap-10 lg:gap-14            /* space between text & icon */
           text-center md:text-left
         "
