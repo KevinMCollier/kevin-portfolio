@@ -66,7 +66,7 @@ export default function Banner() {
 
           <p className="mt-5 text-sm text-off-white/70">
           <a
-            href="#the-feedback-loop-details"
+            href="#FeedbackLoop"
             onClick={(e) => {
               e.preventDefault();
               document.getElementById('feedback-loop')?.scrollIntoView({ behavior: 'smooth' });

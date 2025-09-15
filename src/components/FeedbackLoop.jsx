@@ -1,17 +1,16 @@
 import CoachGraphic from "/public/coach-call-graphic.svg";
 
-export default function CoachCall() {
+export default function FeedbackLoop() {
   return (
-    <section id="CoachCall" className="bg-coach-blue">
+    <section id="FeedbackLoop" className="bg-coach-blue">
       <div
         className="
           mx-auto max-w-7xl
           flex flex-col md:flex-row
           justify-center items-center
           px-6 lg:px-12
-          py-20 lg:py-28
+          py-10 md:py-12 lg:py-14
           gap-10 lg:gap-14            /* space between text & icon */
-          min-h-[70vh]
           text-center md:text-left
         "
       >
