@@ -6,7 +6,6 @@ export default function Banner() {
   const { t } = useTranslation('banner');       // uses banner.tagline + (new) banner.value.*
   const { t: tc } = useTranslation('contact');  // reuse CTA + modal labels
 
-  const [openInquiry, setOpenInquiry] = useState(false);
   const [openSignup, setOpenSignup] = useState(false);
 
   // same helper style as ContactSplit
@@ -50,17 +49,6 @@ export default function Banner() {
               className={btn('bg-copper-rust text-off-white', 'hover:bg-copper-rust/90')}
             >
               {tc('cta.call')}
-            </button>
-
-            {/* Inquiry (secondary) */}
-            <button
-              onClick={() => setOpenInquiry(true)}
-              className={btn(
-                'border border-off-white text-off-white',
-                'hover:bg-off-white hover:text-midnight-navy'
-              )}
-            >
-              {tc('cta.inquiry')}
             </button>
           </div>
 
@@ -158,87 +146,6 @@ export default function Banner() {
         </div>
       )}
 
-      {/* ===== INQUIRY MODAL ===== */}
-      {openInquiry && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
-          onClick={() => setOpenInquiry(false)}
-        >
-          <div
-            className="bg-off-white w-full max-w-lg rounded-xl p-8 space-y-6 relative"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h3 className="text-midnight-navy font-bold text-2xl">
-              {tc('modalInquiry.title')}
-            </h3>
-
-            <form
-              name="inquiry-hero"
-              method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              className="space-y-4"
-            >
-              <input type="hidden" name="form-name" value="inquiry-hero" />
-              <input type="hidden" name="redirect" value="/thank-you.html" />
-
-              <p className="hidden">
-                <label>
-                  Don’t fill this out: <input name="bot-field" />
-                </label>
-              </p>
-
-              <input
-                required
-                name="name"
-                placeholder={tc('modalInquiry.namePlaceholder')}
-                className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
-              />
-              <input
-                required
-                type="email"
-                name="email"
-                placeholder={tc('modalInquiry.emailPlaceholder')}
-                className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
-              />
-              <textarea
-                required
-                name="message"
-                rows={4}
-                placeholder={tc('modalInquiry.messagePlaceholder')}
-                className="w-full border border-stone-grey rounded px-4 py-2 focus:ring-2 focus:ring-copper-rust focus:outline-none"
-              />
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  type="submit"
-                  className={btn('flex-1 bg-copper-rust text-off-white', 'hover:bg-copper-rust/90')}
-                >
-                  {tc('modalInquiry.send')}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setOpenInquiry(false)}
-                  className={btn(
-                    'flex-1 border border-graphite text-graphite',
-                    'hover:bg-graphite hover:text-off-white'
-                  )}
-                >
-                  {tc('modalInquiry.cancel')}
-                </button>
-              </div>
-            </form>
-
-            <button
-              onClick={() => setOpenInquiry(false)}
-              aria-label="Close modal"
-              className="absolute top-4 right-4 text-graphite hover:text-midnight-navy"
-            >
-              ✕
-            </button>
-          </div>
-        </div>
-      )}
     </section>
   );
 }
