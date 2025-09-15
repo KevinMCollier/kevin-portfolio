@@ -3,9 +3,8 @@ import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Footer from "./components/Footer";
-// import Services from "./components/Services"
 import Painpoints from "./components/Painpoints"
-// import CoachCall from "./components/CoachCall";
+import CoachCall from "./components/CoachCall";
 import CoachCallDetails from "./components/CoachCallDetails";
 import HowIHelp from "./components/HowIHelp";
 // import StatsGrid from "./components/StatsGrid";
@@ -20,7 +19,7 @@ function App() {
         <Painpoints />
         <HowIHelp />
         {/* <StatsGrid /> */}
-        {/* <CoachCall /> */}
+        <CoachCall />
         <CoachCallDetails />
         <About />
         <Contact />

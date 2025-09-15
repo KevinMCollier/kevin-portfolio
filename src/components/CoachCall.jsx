@@ -26,8 +26,8 @@ export default function CoachCall() {
           "
         >
           <span>THE</span>
-          <span>COACH</span>
-          <span>CALL</span>
+          <span>FEEDBACK</span>
+          <span>LOOP</span>
         </div>
 
         {/* graphic */}

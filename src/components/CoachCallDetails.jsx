@@ -23,7 +23,7 @@ export default function CoachCallDetails() {
 
   const Check = (
     <svg
-      className="h-5 w-5 flex-shrink-0 text-midnight-navy translate-y-[2px]"
+      className="h-5 w-5 flex-shrink-0 text-copper-rust translate-y-[2px]"
       viewBox="0 0 24 24"
       fill="currentColor"
       aria-hidden="true"
@@ -37,33 +37,36 @@ export default function CoachCallDetails() {
   );
 
   return (
-    <section id="coach-call" className="bg-coach-blue py-20">
-      <div className="container mx-auto px-5 grid gap-12 md:grid-cols-2">
+    // White background + thin top border to match Painpoints vibe
+    <section id="coach-call" className="border-t border-white/10 bg-white">
+      <div className="container mx-auto px-5 py-20 grid gap-12 md:grid-cols-2">
         {/* LEFT */}
         <div className="max-w-[60ch]">
-          {/* Eyebrow label adds hierarchy */}
+          {/* Eyebrow label (navy, subtle) */}
           <p className="uppercase tracking-wide text-midnight-navy/70 font-semibold mb-2">
-            {t('label', { defaultValue: 'Recommended starting engagement' })}
+            {t('label', { defaultValue: 'Featured Service' })}
           </p>
 
-          {/* Main title */}
+          {/* Main title (navy) */}
           <h2 className="font-mont font-black text-midnight-navy text-4xl md:text-5xl leading-tight tracking-tight">
             {t('headline.main')}
           </h2>
 
-          {/* Subheadline — smaller + lighter weight */}
-          <p className="mt-2 font-mont font-semibold text-midnight-navy text-xl sm:text-2xl md:text-3xl leading-tight">
+          {/* Subheadline (paragraph → black) */}
+          <p className="mt-2 font-mont font-semibold text-xl sm:text-2xl md:text-3xl leading-tight text-copper-rust">
             {t('headline.sub')}
           </p>
 
-          <p className="mt-6 text-midnight-navy/90 text-lg sm:text-xl leading-relaxed">
+          {/* Body copy (black) */}
+          <p className="mt-6 text-lg sm:text-xl leading-relaxed text-black">
             {t('sessionIntro')}
           </p>
 
-          <ul className="mt-3 space-y-3 text-midnight-navy/90 text-lg sm:text-xl leading-relaxed">
+          {/* Bulleted points with copper bullets (match Painpoints) */}
+          <ul className="mt-3 space-y-3 text-lg sm:text-xl leading-relaxed text-black">
             {sessionKeys.map((k) => (
               <li key={k} className="flex gap-3">
-                <span aria-hidden className="mt-2 h-2 w-2 rounded-full bg-midnight-navy inline-block" />
+                <span aria-hidden className="mt-2 h-2 w-2 rounded-full bg-copper-rust inline-block" />
                 <span>
                   <Trans i18nKey={`sessionPoints.${k}`} t={t} components={{ strong: <strong /> }} />
                 </span>
@@ -74,22 +77,24 @@ export default function CoachCallDetails() {
 
         {/* RIGHT */}
         <div className="md:border-l md:border-midnight-navy/15 md:pl-10">
+          {/* Section heading (navy) */}
           <h3 className="text-midnight-navy font-semibold text-2xl mb-6">
             {t('keyBenefitsHeading')}
           </h3>
 
+          {/* Benefit rows: copper check + black text */}
           <div className="space-y-5">
             {benefitKeys.map((k) => (
               <div key={k} className="flex items-start gap-3">
                 {Check}
-                <p className="text-midnight-navy/90 text-lg sm:text-xl leading-relaxed break-words">
+                <p className="text-lg sm:text-xl leading-relaxed break-words text-black">
                   {t(`benefits.${k}`)}
                 </p>
               </div>
             ))}
           </div>
 
-          {/* CTAs */}
+          {/* CTAs: primary navy, secondary copper accent */}
           <div className="mt-10 flex flex-col sm:flex-row gap-3">
             <a
               href="#contact"
@@ -100,15 +105,16 @@ export default function CoachCallDetails() {
             <button
               onClick={openCalendly}
               className={btn(
-                'border border-midnight-navy text-midnight-navy',
-                'hover:bg-midnight-navy hover:text-off-white'
+                'border border-copper-rust text-copper-rust',
+                'hover:bg-copper-rust hover:text-off-white'
               )}
             >
               {tc('cta.call')}
             </button>
           </div>
 
-          <p className="mt-3 text-midnight-navy/80 text-sm">
+          {/* Footnote (graphite, like Painpoints subtext tone) */}
+          <p className="mt-3 text-graphite text-sm">
             {t('postMonthNote', {
               defaultValue:
                 'After Month 3: stop with a handover or move to an Ongoing Partner plan.'
