@@ -1,0 +1,22 @@
+{
+  "heading": "How I Help",
+  "items": {
+    "leadership": {
+      "title": "Leadership Development",
+      "desc": "Confident managers, stronger teams."
+    },
+    "crossCultural": {
+      "title": "Cross-Cultural Communication",
+      "desc": "Smoother global collaboration."
+    },
+    "earlyCareer": {
+      "title": "Early Career & Professional Growth",
+      "desc": "Faster ramp-up, motivated staff."
+    },
+    "engagement": {
+      "title": "Engagement & Retention",
+      "desc": "Fewer surprise resignations, higher commitment."
+    }
+  },
+  "ctaLine": "Every organization is different. Book a meeting and we can discuss the right solutions for your team."
+}
