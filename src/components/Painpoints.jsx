@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-export default function Audience() {
+export default function Painpoints() {
   const { t } = useTranslation("audience");
 
   const teamPoints = t("teams.points", { returnObjects: true }) || [];
