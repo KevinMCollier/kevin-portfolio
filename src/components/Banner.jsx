@@ -1,7 +1,6 @@
 /* src/components/Banner.jsx */
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Globe2, Bolt, BarChart3 } from 'lucide-react'; // icons for the Value Bar
 
 export default function Banner() {
   const { t } = useTranslation('banner');       // uses banner.tagline + (new) banner.value.*
@@ -26,21 +25,6 @@ export default function Banner() {
     }
   };
 
-  // ===== VALUE BAR DATA (i18n-friendly with sensible defaults) =====
-  const valueItems = [
-    {
-      icon: Globe2,
-      label: t('value.jpGlobal', { defaultValue: 'Japan–Global, bilingual (EN/JP)' }),
-    },
-    {
-      icon: Bolt,
-      label: t('value.actionSprints', { defaultValue: 'Action sprints that create habits' }),
-    },
-    {
-      icon: BarChart3,
-      label: t('value.measurable', { defaultValue: 'Measurable improvements in 30–90 days' }),
-    },
-  ];
 
   return (
     <section id="banner" className="bg-midnight-navy h-screen pt-28 md:pt-0">
@@ -57,19 +41,6 @@ export default function Banner() {
           <h2 className="mt-6 max-w-3xl text-xl text-off-white/90">
             {t('tagline', { defaultValue: t('sub', { defaultValue: '' }) })}
           </h2>
-
-          {/* === VALUE BAR (inline) === */}
-          <div className="mt-4 max-w-3xl text-off-white/80 text-sm">
-            {valueItems.map(({ label }, i) => (
-              <span key={label} className="inline">
-                {label}
-                {i < valueItems.length - 1 && (
-                  <span className="mx-2 align-middle inline-block h-1 w-1 rounded-full bg-off-white/40" />
-                )}
-              </span>
-            ))}
-          </div>
-
 
           {/* === CTAs === */}
           <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -92,6 +63,22 @@ export default function Banner() {
               {tc('cta.inquiry')}
             </button>
           </div>
+
+          <p className="mt-5 text-sm text-off-white/70">
+          <a
+            href="#the-feedback-loop-details"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('feedback-loop')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="underline underline-offset-4 hover:text-off-white"
+          >
+            {t('offering', {
+              defaultValue: 'Want lasting change? Discover The Feedback Loop.',
+            })}
+          </a>
+        </p>
+
         </div>
       </div>
 
