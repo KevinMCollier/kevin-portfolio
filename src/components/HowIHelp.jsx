@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 export default function HowIHelp() {
   const { t } = useTranslation('howIHelp');
 
-  const keys = ['leadership', 'crossCultural', 'earlyCareer', 'engagement'];
+  const keys = ['workshops', 'training', 'process', 'coaching'];
 
   return (
     <section id="how-i-help" className="bg-off-white py-20">

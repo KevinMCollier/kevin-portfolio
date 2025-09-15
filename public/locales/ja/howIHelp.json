@@ -1,22 +1,22 @@
 {
   "heading": "How I Help",
   "items": {
-    "leadership": {
-      "title": "Leadership Development",
-      "desc": "Confident managers, stronger teams."
+    "workshops": {
+      "title": "Group Workshops",
+      "desc": "Interactive training sessions on leadership, cross-cultural communication, and team cohesion. Build confidence in business English, prepare staff for global roles, and strengthen collaboration across departments."
     },
-    "crossCultural": {
-      "title": "Cross-Cultural Communication",
-      "desc": "Smoother global collaboration."
+    "training": {
+      "title": "Ongoing Training Programs",
+      "desc": "Structured development journeys for managers and teams. Improve delegation, motivate staff, and develop early-career employees as they discover their professional path."
     },
-    "earlyCareer": {
-      "title": "Early Career & Professional Growth",
-      "desc": "Faster ramp-up, motivated staff."
+    "process": {
+      "title": "HR Process Improvement",
+      "desc": "Optimize onboarding, feedback systems, and manager 1:1s. Reduce ramp-up time, increase retention, and create ways-of-working that align Japan and global expectations."
     },
-    "engagement": {
-      "title": "Engagement & Retention",
-      "desc": "Fewer surprise resignations, higher commitment."
+    "coaching": {
+      "title": "1:1 Coaching & Feedback",
+      "desc": "Confidential sessions for individuals. Surface hidden issues, support career growth, and provide a safe space to develop clarity and motivation."
     }
   },
-  "ctaLine": "Every organization is different. Book a meeting and we can discuss the right solutions for your team."
+  "ctaLine": "Book a meeting and we can discuss the right solutions for your team."
 }

@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import Painpoints from "./components/Painpoints"
 // import CoachCall from "./components/CoachCall";
 import CoachCallDetails from "./components/CoachCallDetails";
-import Process from "./components/Process";
+import HowIHelp from "./components/HowIHelp";
 // import StatsGrid from "./components/StatsGrid";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Banner />
         {/* <Services /> */}
         <Painpoints />
-        <Process />
+        <HowIHelp />
         {/* <StatsGrid /> */}
         {/* <CoachCall /> */}
         <CoachCallDetails />
