@@ -50,17 +50,14 @@ export default function FeedbackLoopDetails() {
             {t('headline.main')}
           </h2>
 
-          <p className="mt-2 font-mont font-semibold text-copper-rust text-lg sm:text-xl md:text-2xl leading-tight">
+          <p className="mt-2 font-mont font-semibold text-copper-rust text-lg sm:text-lg md:text-lg leading-tight">
             {t('headline.sub')}
           </p>
 
-          {/* Intro — now matches text-base sm:text-lg */}
-          <p className={`mt-6 ${body}`}>
-            {t('sessionIntro')}
-          </p>
+
 
           {/* How it works — now matches text-base sm:text-lg */}
-          <ul className={`mt-3 space-y-3 ${body}`}>
+          <ul className={`mt-7 space-y-3 ${body}`}>
             {sessionKeys.map((k) => (
               <li key={k} className="flex gap-3">
                 <span aria-hidden className="mt-2 h-2 w-2 rounded-full bg-copper-rust inline-block" />
@@ -74,7 +71,7 @@ export default function FeedbackLoopDetails() {
 
         {/* RIGHT */}
         <div className="md:border-l md:border-midnight-navy/15 md:pl-10">
-          <h3 className="text-midnight-navy font-semibold text-2xl mb-6">
+          <h3 className="text-midnight-navy font-semibold text-xl mb-6">
             {t('keyBenefitsHeading')}
           </h3>
 
