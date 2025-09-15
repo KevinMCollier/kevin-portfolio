@@ -17,7 +17,6 @@ function App() {
       <div className="App text-gray-800 bg-gray-200 body-font">
         <Navbar />
         <Banner />
-        {/* <Services /> */}
         <Painpoints />
         <HowIHelp />
         {/* <StatsGrid /> */}
