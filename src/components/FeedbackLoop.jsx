@@ -2,7 +2,7 @@ import CoachGraphic from "/public/coach-call-graphic.svg";
 
 export default function FeedbackLoop() {
   return (
-    <section id="FeedbackLoop" className="bg-coach-blue">
+    <section id="FeedbackLoop" className="bg-coach-blue scroll-mt-24 md:scroll-mt-28">
       <div
         className="
           mx-auto max-w-7xl
