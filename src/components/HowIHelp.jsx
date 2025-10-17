@@ -12,7 +12,7 @@ export default function HowIHelp() {
   const openCalendly = () => {
     if (window?.Calendly?.initPopupWidget) {
       window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/kevin-collier-consulting/30min',
+        url: 'https://calendly.com/collier-consulting/collier-consulting-free-consultation',
       });
     } else {
       document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });

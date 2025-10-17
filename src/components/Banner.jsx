@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function Banner() {
-  const { t } = useTranslation('banner');       // uses banner.tagline + (new) banner.value.*
+  const { t } = useTranslation('banner');       // uses banner.tagline + (new) banner.ewkCta
   const { t: tc } = useTranslation('contact');  // reuse CTA + modal labels
 
   const [openSignup, setOpenSignup] = useState(false);
@@ -17,13 +17,12 @@ export default function Banner() {
   const openCalendly = () => {
     if (window?.Calendly?.initPopupWidget) {
       window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/kevin-collier-consulting/30min',
+        url: 'https://calendly.com/collier-consulting/collier-consulting-free-consultation',
       });
     } else {
       document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
 
   return (
     <section id="banner" className="bg-midnight-navy h-screen pt-28 md:pt-0">
@@ -50,25 +49,42 @@ export default function Banner() {
             >
               {tc('cta.call')}
             </button>
+
+            {/* EwK Link (secondary) */}
+            <a
+              href="https://english-kevin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={btn(
+                'bg-off-white text-midnight-navy',
+                'hover:bg-off-white/90',
+                'whitespace-nowrap'
+              )}
+              aria-label="Visit English with Kevin for 1:1 Private Sessions (opens in a new tab)"
+            >
+              {t('ewkCta', {
+                defaultValue: 'For 1:1 Private Sessions, visit English with Kevin',
+              })}
+            </a>
           </div>
 
           <p className="mt-5 text-sm text-off-white/70">
-          <a
-            href="#FeedbackLoop"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('FeedbackLoop')?.scrollIntoView({
-                behavior: 'smooth', block: 'start'
-              });
-            }}
-            className="underline underline-offset-4 hover:text-off-white"
-          >
-            {t('offering', {
-              defaultValue: 'Want lasting change? Discover The Feedback Loop.',
-            })}
-          </a>
-        </p>
-
+            <a
+              href="#CoachCall"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('CoachCall')?.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start',
+                });
+              }}
+              className="underline underline-offset-4 hover:text-off-white"
+            >
+              {t('offering', {
+                defaultValue: 'Want lasting change? Discover The Coach Call.',
+              })}
+            </a>
+          </p>
         </div>
       </div>
 
@@ -145,7 +161,6 @@ export default function Banner() {
           </div>
         </div>
       )}
-
     </section>
   );
 }

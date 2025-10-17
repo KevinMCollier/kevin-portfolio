@@ -4,10 +4,10 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Painpoints from "./components/Painpoints"
-import FeedbackLoop from "./components/FeedbackLoop";
-import FeedbackLoopDetails from "./components/FeedbackLoopDetails";
 import HowIHelp from "./components/HowIHelp";
 import StatsGrid from "./components/StatsGrid";
+import CoachCall from "./components/CoachCall"
+import CoachCallDetails from "./components/CoachCallDetails"
 
 function App() {
 
@@ -19,8 +19,8 @@ function App() {
         <Painpoints />
         <StatsGrid />
         <HowIHelp />
-        <FeedbackLoop />
-        <FeedbackLoopDetails />
+        <CoachCall />
+        <CoachCallDetails />
         <About />
         <Contact />
         <Footer />

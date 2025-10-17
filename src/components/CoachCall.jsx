@@ -25,8 +25,8 @@ export default function FeedbackLoop() {
           "
         >
           <span>THE</span>
-          <span>FEEDBACK</span>
-          <span>LOOP</span>
+          <span>COACH</span>
+          <span>CALL</span>
         </div>
 
         {/* graphic */}
