@@ -34,9 +34,9 @@ export default function Navbar() {
 
         {/* Desktop links */}
         <nav className="hidden md:flex items-center space-x-6 text-off-white">
-          <a href="#FeedbackLoop" className="hover:text-copper-rust transition">
-            {t('feedbackLoop', {
-              defaultValue: t('coachCall', { defaultValue: 'Feedback Loop' }),
+          <a href="#CoachCall" className="hover:text-copper-rust transition">
+            {t('coachCall', {
+              defaultValue: t('coachCall', { defaultValue: 'Coach Call' }),
             })}
           </a>
           <a href="#about" className="hover:text-copper-rust transition">
@@ -67,12 +67,12 @@ export default function Navbar() {
       {open && (
         <nav className="md:hidden bg-midnight-navy px-5 pb-6 space-y-4 text-off-white text-lg">
           <a
-            href="#FeedbackLoop"
+            href="#coachCall"
             onClick={() => setOpen(false)}
             className="block w-full hover:text-copper-rust transition"
           >
-            {t('feedbackLoop', {
-              defaultValue: t('feedbackLoop', { defaultValue: 'Feedback Loop' }),
+            {t('coachCall', {
+              defaultValue: t('coachCall', { defaultValue: 'Coach Call' }),
             })}
           </a>
           <a

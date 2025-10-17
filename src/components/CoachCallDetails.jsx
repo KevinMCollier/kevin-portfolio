@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 
-export default function FeedbackLoopDetails() {
-  const { t } = useTranslation('feedbackLoopDetails');
+export default function CoachCallDetails() {
+  const { t } = useTranslation('coachCallDetails');
   const { t: tc } = useTranslation('contact');
 
   const [openSignup, setOpenSignup] = useState(false); // NEW
