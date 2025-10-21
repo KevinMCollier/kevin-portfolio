@@ -3,16 +3,14 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function Banner() {
-  const { t } = useTranslation('banner');       // uses banner.tagline + (new) banner.ewkCta
-  const { t: tc } = useTranslation('contact');  // reuse CTA + modal labels
+  const { t } = useTranslation('banner');       // banner.tagline + banner.ewkCta
+  const { t: tc } = useTranslation('contact');  // CTA strings
 
   const [openSignup, setOpenSignup] = useState(false);
 
-  // same helper style as ContactSplit
+  // shared button base
   const btn = (...c) =>
-    `inline-flex items-center justify-center text-base font-semibold px-6 py-2 rounded-lg transition ${c.join(
-      ' '
-    )}`;
+    `inline-flex items-center justify-center text-base font-semibold px-6 py-2 rounded-lg transition ${c.join(' ')}`;
 
   const openCalendly = () => {
     if (window?.Calendly?.initPopupWidget) {
@@ -26,39 +24,41 @@ export default function Banner() {
 
   return (
     <section id="banner" className="bg-midnight-navy h-screen pt-28 md:pt-0">
-      <div className="container mx-auto flex px-10 lg:py-20 md:flex-row flex-col items-center">
-        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start text-center md:text-left mb-10 md:mb-0">
-
+      <div className="container mx-auto flex px-6 sm:px-10 lg:py-20 md:flex-row flex-col items-center">
+        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col items-start text-left mb-10 md:mb-0">
           {/* === HEADLINE === */}
-          <h1 className="font-mont font-bold text-off-white text-6xl sm:text-8xl tracking-tight">
+          <h1 className="font-mont font-bold text-off-white text-5xl sm:text-7xl tracking-tight leading-[1.05]">
             <span className="text-sea-mist">Growth</span> begins with your&nbsp;
             <span className="text-copper-rust">people</span>
           </h1>
 
           {/* === TAGLINE === */}
-          <h2 className="mt-6 max-w-3xl text-xl text-off-white/90">
+          <h2 className="mt-5 max-w-3xl text-lg sm:text-xl text-off-white/90">
             {t('tagline', { defaultValue: t('sub', { defaultValue: '' }) })}
           </h2>
 
           {/* === CTAs === */}
-          <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            {/* Book Call (primary) */}
+          <div className="mt-7 flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
+            {/* Primary: content-width, left-aligned */}
             <button
               onClick={openCalendly}
-              className={btn('bg-copper-rust text-off-white', 'hover:bg-copper-rust/90')}
+              className={btn(
+                'bg-copper-rust text-off-white hover:bg-copper-rust/90',
+                'self-start w-auto'
+              )}
             >
               {tc('cta.call')}
             </button>
 
-            {/* EwK Link (secondary) */}
+            {/* Secondary: allow wrap, limit width on mobile, left-aligned */}
             <a
               href="https://english-kevin.com"
               target="_blank"
               rel="noopener noreferrer"
               className={btn(
-                'bg-off-white text-midnight-navy',
-                'hover:bg-off-white/90',
-                'whitespace-nowrap'
+                'bg-off-white text-midnight-navy hover:bg-off-white/90',
+                'self-start text-left whitespace-normal leading-snug',
+                'max-w-[20rem] sm:max-w-none' // <= wraps to 2 lines on small if needed
               )}
               aria-label="Visit English with Kevin for 1:1 Private Sessions (opens in a new tab)"
             >
@@ -68,12 +68,13 @@ export default function Banner() {
             </a>
           </div>
 
+          {/* Sub-link */}
           <p className="mt-5 text-sm text-off-white/70">
             <a
-              href="#CoachCall"
+              href="#coachCall"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('CoachCall')?.scrollIntoView({
+                document.getElementById('coachCall')?.scrollIntoView({
                   behavior: 'smooth',
                   block: 'start',
                 });
