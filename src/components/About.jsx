@@ -41,9 +41,9 @@ export default function About() {
             {t('credibility')}
           </p>
 
-          <p className="max-w-[55ch] text-xl leading-relaxed mb-6 break-words [text-wrap:balance]">
+          {/* <p className="max-w-[55ch] text-xl leading-relaxed mb-6 break-words [text-wrap:balance]">
             {t('story')}
-          </p>
+          </p> */}
 
           <p className="text-lg font-semibold break-words">{t('mission')}</p>
         </div>
