@@ -2,15 +2,18 @@ import CoachGraphic from "/public/coach-call-graphic.svg";
 
 export default function CoachCall() {
   return (
-    <section id="CoachCall" className="bg-coach-blue scroll-mt-24 md:scroll-mt-28">
+    <section
+      id="CoachCall"
+      className="bg-coach-blue scroll-mt-24 md:scroll-mt-28"
+    >
       <div
         className="
           mx-auto max-w-7xl
           flex flex-col md:flex-row
           justify-center items-center
           px-6 lg:px-12
-          py-15 md:py-14 lg:py-16
-          gap-10 lg:gap-14            /* space between text & icon */
+          py-24 sm:py-28 md:py-14 lg:py-16   /* more blue space on mobile */
+          gap-10 lg:gap-14                    /* space between text & icon */
           text-center md:text-left
         "
       >
@@ -37,7 +40,7 @@ export default function CoachCall() {
             flex-none
             w-28 sm:w-36 md:w-40 lg:w-52
             h-auto
-            lg:-mt-12            /* lift ~48 px on large screens */
+            lg:-mt-12   /* lift ~48 px on large screens */
           "
           loading="lazy"
         />
