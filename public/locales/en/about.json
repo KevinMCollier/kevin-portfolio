@@ -9,7 +9,13 @@
       "ld": "L&D & leadership coaching"
     }
   },
-  "credibility": "I’m Kevin Collier — an MBA with 11+ years in Japan helping teams work better together. My career spans leading People & Culture initiatives, onboarding 400+ staff, and designing leadership programs that actually stick.",
-  "story": "Raised in LA and shaped by time in Arizona and Europe, I bring a global lens to Japanese workplaces.",
-  "mission": "My mission: align people, culture, and strategy so work feels both productive and human."
+  "credibility": "I specialize in helping teams align around shared goals — across cultures, functions, and backgrounds. For the past 11 years in Japan, I've supported leaders, managers, and early-career talent in building:",
+  "pillars": [
+    "clearer communication",
+    "stronger collaboration",
+    "healthier culture",
+    "real accountability and trust"
+  ],
+  "approach": "My approach blends structured leadership practices with a human-centered mindset. I listen deeply, turn insights into action, and help teams build habits that last — not just workshops that feel good once.",
+  "mission": "When people feel understood and aligned, they perform better — and they stay longer."
 }

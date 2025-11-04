@@ -3,6 +3,11 @@ import { useTranslation } from 'react-i18next';
 export default function About() {
   const { t } = useTranslation('about');
 
+  // i18next returns the array when returnObjects: true
+  // Fallback to [] if it's missing or not an array
+  const rawPillars = t('pillars', { returnObjects: true });
+  const pillars = Array.isArray(rawPillars) ? rawPillars : [];
+
   return (
     <section id="about" className="bg-stone-grey text-midnight-navy">
       <div className="container mx-auto flex px-5 pt-20 pb-20 md:flex-row flex-col items-center">
@@ -37,15 +42,29 @@ export default function About() {
             {t('heading')}
           </h1>
 
-          <p className="max-w-[55ch] text-xl leading-relaxed mb-6 break-words">
+          {/* Credibility / Intro */}
+          <p className="max-w-[55ch] text-xl leading-relaxed mb-4 break-words">
             {t('credibility')}
           </p>
 
-          {/* <p className="max-w-[55ch] text-xl leading-relaxed mb-6 break-words [text-wrap:balance]">
-            {t('story')}
-          </p> */}
+          {/* Pillars */}
+          {pillars.length > 0 && (
+            <ul className="max-w-[55ch] list-disc ml-5 mb-6 space-y-1 text-lg">
+              {pillars.map((item, idx) => (
+                <li key={idx} className="break-words">{item}</li>
+              ))}
+            </ul>
+          )}
 
-          <p className="text-lg font-semibold break-words">{t('mission')}</p>
+          {/* Approach */}
+          <p className="max-w-[55ch] text-lg leading-relaxed mb-6 break-words">
+            {t('approach')}
+          </p>
+
+          {/* Mission / Belief */}
+          <p className="text-lg font-semibold break-words">
+            {t('mission')}
+          </p>
         </div>
       </div>
     </section>
