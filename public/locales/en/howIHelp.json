@@ -1,22 +1,22 @@
 {
-  "heading": "How I Help",
+  "heading": "提供する支援",
   "items": {
     "workshops": {
-      "title": "Group Workshops",
-      "desc": "Run <strong>interactive workshops</strong> that sharpen leadership skills, strengthen cross-cultural communication, and build team cohesion. Help staff gain confidence in business English, prepare for global roles, and collaborate smoothly across departments."
+      "title": "チームアライメント・ワークショップ",
+      "desc": "リーダーシップ力の強化、異文化コミュニケーションの改善、チームの一体感醸成を目的とした<strong>参加型ワークショップ</strong>を実施します。ビジネス英語への自信を高め、グローバル役割への準備と、部署間でのスムーズな協働を支援します。"
     },
     "training": {
-      "title": "Ongoing Training Programs",
-      "desc": "Guide managers and teams through <strong>structured development journeys</strong>. Push leaders to delegate effectively, keep staff motivated, and shape early-career employees as they grow into their professional path."
+      "title": "リーダー育成パスウェイ",
+      "desc": "<strong>体系的な成長プロセス</strong>を通じて、マネージャーとチームを継続的に支援します。効果的な権限移譲、動機づけ、若手育成を実行できるリーダーへと成長させます。"
     },
     "process": {
-      "title": "HR Process Improvement",
-      "desc": "Redesign and <strong>optimize onboarding, feedback systems, employer branding, and manager 1:1s</strong>. Cut ramp-up time, boost retention, and align ways-of-working across Japan and global offices."
+      "title": "ワークカルチャー & 働き方デザイン",
+      "desc": "オンボーディング、フィードバック体制、エンプロイヤーブランディング、マネージャー1on1を<strong>再設計・最適化</strong>します。立ち上がり期間を短縮し、離職を防ぎ、日系・グローバル両方に通用する働き方を整えます。"
     },
     "coaching": {
-      "title": "1:1 Coaching & Feedback",
-      "desc": "Offer <strong>confidential coaching sessions</strong> where individuals surface hidden issues, clarify their goals, and build motivation. Create a safe space for career growth and clear next steps."
+      "title": "リーダーシップ & コミュニケーション・コーチング（1:1）",
+      "desc": "<strong>機密性が守られた1:1セッション</strong>により、個人が抱える課題を整理し、目標を明確にし、行動への意欲を引き出します。成長のための安全な対話の場をつくります。"
     }
   },
-  "ctaLine": "Let's discuss the right solutions for your team"
+  "ctaLine": "御社に最適なアプローチについて話しましょう"
 }
