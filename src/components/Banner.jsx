@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* src/components/Banner.jsx */
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -28,8 +29,8 @@ export default function Banner() {
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col items-start text-left mb-10 md:mb-0">
           {/* === HEADLINE === */}
           <h1 className="font-mont font-bold text-off-white text-5xl sm:text-7xl tracking-tight leading-[1.05]">
-            <span className="text-sea-mist">Growth</span> begins with your&nbsp;
-            <span className="text-copper-rust">people</span>
+            <span className="text-sea-mist">Teams</span> work better when they're&nbsp;
+            <span className="text-copper-rust">aligned</span>
           </h1>
 
           {/* === TAGLINE === */}
